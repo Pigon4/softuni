@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\wwwroot\\drakos.gif",
+      "PackagePath": "staticwebassets\\drakos.gif"
+    },
+    {
       "Id": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

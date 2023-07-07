@@ -14,5 +14,38 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#background_image {
+    background-image:url('../drakos.gif');
+    background-size:cover;
+    
+}
+
+#header {
+    width: 100%;
+    width: inherit;
+    height: 50px;
+    background-color:black;
+}
+#header_list_group_item {
+    width: auto;
+    margin-left: 15px;
+    background: none;
+    border:none;
+    color: white;
+    font: bold;
+    text-align: left;
+}
+
+#box {
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    max-width: 1450px;
+    height: 595px;
+    margin-top: 1px;
+    scroll-padding-bottom: 50px;
+    border-radius:25px;
 }

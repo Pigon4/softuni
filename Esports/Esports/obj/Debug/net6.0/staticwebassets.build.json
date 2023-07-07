@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FTc1Sz+Wci+tSCUczBKZXvoPiOGcTgGaYld1R2aoN9Y=",
+  "Hash": "lY/7XoEqYIeYroy4tZ9PQO0ih0FzxG5OxSsyreeD8nY=",
   "Source": "Esports",
   "BasePath": "_content/Esports",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\wwwroot\\drakos.gif",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "drakos.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\drakos.gif"
     },
     {
       "Identity": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\wwwroot\\favicon.ico",
