@@ -18,7 +18,20 @@ namespace Esports.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult MyTeam()
+        {
+            return View();
+        }
+
+        public IActionResult Leaderboards()
+        {
+            return View();
+        }
+        public IActionResult Packs()
+        {
+            return View();
+        }
+        public IActionResult Live()
         {
             return View();
         }

@@ -45,7 +45,14 @@ body {
     width: 100%;
     max-width: 1450px;
     height: 595px;
-    margin-top: 1px;
+    margin-top: 50px;
     scroll-padding-bottom: 50px;
     border-radius:25px;
 }
+
+#header-item-font {
+    text-decoration:none;
+    color:white;
+    font:bold;
+}
+

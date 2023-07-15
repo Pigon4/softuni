@@ -9,25 +9,18 @@
     <link rel="stylesheet" href="~/Esports.styles.css" asp-append-version="true" />
 </head>
 
-<body >
+<body id="background_image">
     <div id="header"> 
         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item" id="header_list_group_item">Home</li>
-            <li class="list-group-item" id="header_list_group_item">My Team</li>
-            <li class="list-group-item" id="header_list_group_item">LeaderBoards</li>
-            <li class="list-group-item" id="header_list_group_item">Packs</li>
-            <li class="list-group-item" id="header_list_group_item">Live</li>
+            <li class="list-group-item" id="header_list_group_item"><a id="header-item-font" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="list-group-item" id="header_list_group_item"><a id="header-item-font" asp-controller="Home" asp-action="MyTeam">My Team</a></li>
+            <li class="list-group-item" id="header_list_group_item"><a id="header-item-font" asp-controller="Home" asp-action="Leaderboards">Leaderboards</a></li>
+            <li class="list-group-item" id="header_list_group_item"><a id="header-item-font" asp-controller="Home" asp-action="Packs">Packs</a></li>
+            <li class="list-group-item" id="header_list_group_item"><a id="header-item-font" asp-controller="Home" asp-action="Live">Live</a></li>
         </ul>
 
     </div>
-</body>
 
-
-<body id="background_image">
-    
-    <div style="padding-top:50px"></div>
-    <div class="container" id="box"></div>
-    
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -39,5 +32,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
 </body>
 </html>
