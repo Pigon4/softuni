@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HtlEtq6KhnZ0n+5o4ddfRQPrh7Xq7IyQTcFzCuc2bCKsEK9uyPP9s2eghOe+AX0BYdosFDDUFXQWqbzQ47VtPA==",
+  "dgSpecHash": "t1ixxqanvLYViaD0KguwISRxOZvPTlWKb/zCxntqHLkEgrgAN1JlekQie4/vtZ1JfeyWJjGXsV75YtmDFYUpZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports\\Esports.csproj",
+  "projectFilePath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\Esports.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\la4ez\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\la4ez\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.15\\microsoft.aspnetcore.cryptography.internal.6.0.15.nupkg.sha512",

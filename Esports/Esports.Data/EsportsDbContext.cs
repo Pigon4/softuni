@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 using Esports.DataModels;
+using System.Reflection;
 
 namespace Esports.Data
 {
@@ -21,6 +22,10 @@ namespace Esports.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            Assembly configAssembly = Assembly.GetAssembly(typeof(EsportsDbContext)) ??
+                                        Assembly.GetExecutingAssembly();
+            builder.ApplyConfigurationsFromAssembly(typeof(EsportsDbContext).Assembly);
+
             base.OnModelCreating(builder);
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oqnz1/fIuTMtI/zojBc5GQQ3quUlEtPiPWjlQ+TIeRh+iqnCeWU96Sqzupto9effmJVShtrZN1w8UHMNYhl4KA==",
+  "dgSpecHash": "ym3lb+OlEDm1iXt3V4Jr6pbAQdJHNkF+CllX/2Mxtqc8qiOYifDPsfrANOFbiDD0UTwV8ESX2k+OdBscCOC//w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\la4ez\\source\\repos\\Esports\\Esports.Data.Models\\Esports.DataModels.csproj",
+  "projectFilePath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data.Models\\Esports.DataModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\la4ez\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.15\\microsoft.aspnetcore.cryptography.internal.6.0.15.nupkg.sha512",
     "C:\\Users\\la4ez\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.15\\microsoft.aspnetcore.cryptography.keyderivation.6.0.15.nupkg.sha512",

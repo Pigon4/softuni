@@ -10,3 +10,15 @@ C:\Users\la4ez\source\repos\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports
 C:\Users\la4ez\source\repos\Esports\Esports.Data.Models\obj\Debug\net6.0\refint\Esports.DataModels.dll
 C:\Users\la4ez\source\repos\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.pdb
 C:\Users\la4ez\source\repos\Esports\Esports.Data.Models\obj\Debug\net6.0\ref\Esports.DataModels.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\bin\Debug\net6.0\Esports.DataModels.deps.json
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\bin\Debug\net6.0\Esports.DataModels.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\bin\Debug\net6.0\Esports.DataModels.pdb
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.csproj.AssemblyReference.cache
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.AssemblyInfoInputs.cache
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.AssemblyInfo.cs
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.csproj.CoreCompileInputs.cache
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\refint\Esports.DataModels.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\Esports.DataModels.pdb
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports.Data.Models\obj\Debug\net6.0\ref\Esports.DataModels.dll

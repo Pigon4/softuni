@@ -25,6 +25,8 @@ namespace Esports.Data.Models
         [Required]
         [MaxLength(3)]
         public string Position { get; set; } = null!;
+        [Required]
+        public byte[] Image { get; set; }
         public Guid TeamId { get; set; }
 
         public Teams Team { get; set; }
