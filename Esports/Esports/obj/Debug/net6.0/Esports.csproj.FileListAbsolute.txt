@@ -160,3 +160,4 @@ C:\Users\la4ez\Desktop\git\softuni\Esports\Esports\obj\Debug\net6.0\refint\Espor
 C:\Users\la4ez\Desktop\git\softuni\Esports\Esports\obj\Debug\net6.0\Esports.pdb
 C:\Users\la4ez\Desktop\git\softuni\Esports\Esports\obj\Debug\net6.0\Esports.genruntimeconfig.cache
 C:\Users\la4ez\Desktop\git\softuni\Esports\Esports\obj\Debug\net6.0\ref\Esports.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\Esports\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll

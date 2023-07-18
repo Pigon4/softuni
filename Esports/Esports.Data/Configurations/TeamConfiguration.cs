@@ -20,6 +20,7 @@ namespace Esports.Data.Configurations
         {
             List<Teams> teams = new List<Teams>();
             ImageConverter converter = new ImageConverter();
+            
 
             teams.Add(new Teams
             {
@@ -27,9 +28,20 @@ namespace Esports.Data.Configurations
                 Name = "Fnatic",
                 CountryOrigin = "United Kingdom",
                 Titles = 7,
-                Logo = converter.ConvertToByteArray("..\\..\\..\\Images\\Fnaticlogo_square.png")
+                Logo = converter.ConvertToByteArray("..\\Esports.Data\\Images\\Fnaticlogo_square.png")
                 
             });
+
+            teams.Add(new Teams
+            {
+                Id = Guid.Parse("8fdde911-0ac5-4704-b26d-4efabc8d033c"),
+                Name = "G2",
+                CountryOrigin = "Spain",
+                Titles = 10,
+                Logo = converter.ConvertToByteArray("..\\Esports.Data\\Images\\G2_Esportslogo_profile.png")
+
+            });
+
 
             return teams;
         }
