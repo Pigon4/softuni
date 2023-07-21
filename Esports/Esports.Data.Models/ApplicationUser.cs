@@ -9,6 +9,11 @@ namespace Esports.DataModels
 {
     public class ApplicationUser : IdentityUser<Guid>
     {
+        public ApplicationUser() 
+        {
+
+        }
+
 
     }
 }
