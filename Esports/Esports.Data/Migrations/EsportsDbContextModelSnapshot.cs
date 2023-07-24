@@ -17,7 +17,7 @@ namespace Esports.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.15")
+                .HasAnnotation("ProductVersion", "6.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -670,6 +670,32 @@ namespace Esports.Data.Migrations
                             Name = "Team Vitality",
                             Titles = 0
                         });
+                });
+
+            modelBuilder.Entity("Esports.Data.Models.UserTeams", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AdcId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("JngId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MidId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SupId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TopId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserTeams");
                 });
 
             modelBuilder.Entity("Esports.DataModels.ApplicationUser", b =>

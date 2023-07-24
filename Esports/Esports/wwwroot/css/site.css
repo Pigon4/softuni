@@ -56,3 +56,13 @@ body {
     font:bold;
 }
 
+#Add-Player-Button {
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 300px;
+    margin: 25px;
+    color: white;
+}
+
