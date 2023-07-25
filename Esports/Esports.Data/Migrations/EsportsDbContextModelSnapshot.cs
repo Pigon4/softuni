@@ -672,10 +672,37 @@ namespace Esports.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Esports.Data.Models.UserPacks", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("PackId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "PackId");
+
+                    b.ToTable("UserPacks");
+                });
+
+            modelBuilder.Entity("Esports.Data.Models.UserPlayers", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PlayerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "PlayerId");
+
+                    b.HasIndex("PlayerId");
+
+                    b.ToTable("UserPlayers");
+                });
+
             modelBuilder.Entity("Esports.Data.Models.UserTeams", b =>
                 {
                     b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("AdcId")
@@ -740,6 +767,9 @@ namespace Esports.Data.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -910,6 +940,47 @@ namespace Esports.Data.Migrations
                     b.Navigation("Team");
                 });
 
+            modelBuilder.Entity("Esports.Data.Models.UserPacks", b =>
+                {
+                    b.HasOne("Esports.DataModels.ApplicationUser", "User")
+                        .WithMany("Packs")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Esports.Data.Models.UserPlayers", b =>
+                {
+                    b.HasOne("Esports.Data.Models.Players", "Player")
+                        .WithMany()
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Esports.DataModels.ApplicationUser", "User")
+                        .WithMany("UserPlayers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Esports.Data.Models.UserTeams", b =>
+                {
+                    b.HasOne("Esports.DataModels.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
@@ -964,6 +1035,13 @@ namespace Esports.Data.Migrations
             modelBuilder.Entity("Esports.Data.Models.Teams", b =>
                 {
                     b.Navigation("Players");
+                });
+
+            modelBuilder.Entity("Esports.DataModels.ApplicationUser", b =>
+                {
+                    b.Navigation("Packs");
+
+                    b.Navigation("UserPlayers");
                 });
 #pragma warning restore 612, 618
         }

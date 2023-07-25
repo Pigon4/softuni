@@ -21,9 +21,15 @@ namespace Esports.Data
         public DbSet<Teams> Teams { get; set; } = null!;
 
         public DbSet<UserTeams> UserTeams { get; set; } = null!;
+        public DbSet<UserPacks> UserPacks { get; set; } = null!;
+        public DbSet<UserPlayers> UserPlayers { get; set; } = null!;
+
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<UserPacks>().HasKey(x => new{x.UserId, x.PackId});
+            builder.Entity<UserPlayers>().HasKey(x => new{x.UserId, x.PlayerId});
             Assembly configAssembly = Assembly.GetAssembly(typeof(EsportsDbContext)) ??
                                         Assembly.GetExecutingAssembly();
             builder.ApplyConfigurationsFromAssembly(typeof(EsportsDbContext).Assembly);

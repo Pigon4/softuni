@@ -20,12 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Esports.Data.Models\Esports.DataModels.csproj" />
     <ProjectReference Include="..\Esports.Data\Esports.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

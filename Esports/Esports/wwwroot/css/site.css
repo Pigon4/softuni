@@ -66,3 +66,21 @@ body {
     color: white;
 }
 
+#popupbox {
+    z-index: 9999;
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 110px;
+    left: 545px;
+    visibility: hidden;
+}
+#popupbox.open {
+    visibility: visible;
+}
+#close-popup-box {
+    visibility: hidden;
+}
+

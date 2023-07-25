@@ -4057,7 +4057,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Esports.DataModels": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15",
           "Microsoft.EntityFrameworkCore": "6.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
@@ -4068,19 +4067,6 @@
         },
         "runtime": {
           "bin/placeholder/Esports.Data.dll": {}
-        }
-      },
-      "Esports.DataModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15"
-        },
-        "compile": {
-          "bin/placeholder/Esports.DataModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Esports.DataModels.dll": {}
         }
       }
     }
@@ -11453,17 +11439,11 @@
       "type": "project",
       "path": "../Esports.Data/Esports.Data.csproj",
       "msbuildProject": "../Esports.Data/Esports.Data.csproj"
-    },
-    "Esports.DataModels/1.0.0": {
-      "type": "project",
-      "path": "../Esports.Data.Models/Esports.DataModels.csproj",
-      "msbuildProject": "../Esports.Data.Models/Esports.DataModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Esports.Data >= 1.0.0",
-      "Esports.DataModels >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.15",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.20",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.20",
@@ -11500,9 +11480,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data.Models\\Esports.DataModels.csproj": {
-              "projectPath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data.Models\\Esports.DataModels.csproj"
-            },
             "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data\\Esports.Data.csproj": {
               "projectPath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data\\Esports.Data.csproj"
             }

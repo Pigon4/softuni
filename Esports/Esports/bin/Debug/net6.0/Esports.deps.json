@@ -9,7 +9,6 @@
       "Esports/1.0.0": {
         "dependencies": {
           "Esports.Data": "1.0.0",
-          "Esports.DataModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.15",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.20",
           "Microsoft.AspNetCore.Identity.UI": "6.0.20",
@@ -2621,7 +2620,6 @@
       },
       "Esports.Data/1.0.0": {
         "dependencies": {
-          "Esports.DataModels": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.20",
           "Microsoft.EntityFrameworkCore": "6.0.20",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20",
@@ -2629,14 +2627,6 @@
         },
         "runtime": {
           "Esports.Data.dll": {}
-        }
-      },
-      "Esports.DataModels/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.20"
-        },
-        "runtime": {
-          "Esports.DataModels.dll": {}
         }
       }
     }
@@ -4258,11 +4248,6 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Esports.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Esports.DataModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
