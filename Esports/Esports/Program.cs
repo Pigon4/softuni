@@ -1,9 +1,11 @@
 using Esports.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 using Esports.DataModels;
-
+using Esports.Services.Contracts;
+using Esports.Services;
 
 namespace Esports
 {
@@ -22,6 +24,8 @@ namespace Esports
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<EsportsDbContext>();
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IPackService, PacksService>();
 
             var app = builder.Build();
 

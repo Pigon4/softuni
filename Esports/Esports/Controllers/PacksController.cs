@@ -1,6 +1,7 @@
 ﻿using Esports.Data;
 using Esports.Data.Models;
 using Esports.Services;
+using Esports.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -8,11 +9,11 @@ namespace Esports.Controllers
 {
     public class PacksController : Controller
     {
-        private PacksService packsService;
+        private IPackService _packsService;
 
-        public PacksController(PacksService packsService)
+        public PacksController(IPackService packsService)
         {
-            this.packsService = packsService;
+            this._packsService = packsService;
         }
 
         public IActionResult Index()
@@ -24,7 +25,7 @@ namespace Esports.Controllers
         {
             var currUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 
-            await packsService.GetFreePackAsync(Guid.Parse(currUserId));
+            await _packsService.GetFreePackAsync(Guid.Parse(currUserId));
 
             return RedirectToAction("Packs", "Home");
         }
