@@ -1,16 +1,21 @@
 ﻿using Esports.Models;
+using Esports.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
+using ViewModels;
 
 namespace Esports.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPackService _packService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPackService packService)
         {
             _logger = logger;
+            _packService = packService;
         }
 
         public IActionResult Index()
@@ -27,9 +32,16 @@ namespace Esports.Controllers
         {
             return View();
         }
-        public IActionResult Packs()
+        public async Task<IActionResult> Packs()
         {
-            return View();
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            Dictionary<Guid, List<int>> dict = new Dictionary<Guid, List<int>>();
+            dict.Add(currUserId, await _packService.GetAllPacksByUserIdAsync(currUserId));
+            UserPacksViewModel model = new UserPacksViewModel {
+                UserPacks = dict,
+                HasClaimedFreePack = await _packService.HasClaimedFreePackAsync(currUserId)
+            };
+            return View(model);
         }
         public IActionResult Live()
         {

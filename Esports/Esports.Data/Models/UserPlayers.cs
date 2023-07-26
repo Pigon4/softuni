@@ -11,6 +11,8 @@ namespace Esports.Data.Models
 {
     public class UserPlayers
     {
+        [Key]
+        public int Id { get; set; }
         [ForeignKey(nameof(User))]
         [Required]
         public Guid UserId { get; set; }

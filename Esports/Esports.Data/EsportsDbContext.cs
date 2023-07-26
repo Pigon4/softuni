@@ -28,8 +28,7 @@ namespace Esports.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<UserPacks>().HasKey(x => new{x.UserId, x.PackId});
-            builder.Entity<UserPlayers>().HasKey(x => new{x.UserId, x.PlayerId});
+            
             Assembly configAssembly = Assembly.GetAssembly(typeof(EsportsDbContext)) ??
                                         Assembly.GetExecutingAssembly();
             builder.ApplyConfigurationsFromAssembly(typeof(EsportsDbContext).Assembly);

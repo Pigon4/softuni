@@ -4068,6 +4068,19 @@
         "runtime": {
           "bin/placeholder/Esports.Data.dll": {}
         }
+      },
+      "ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Esports.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModels.dll": {}
+        }
       }
     }
   },
@@ -11439,6 +11452,11 @@
       "type": "project",
       "path": "../Esports.Data/Esports.Data.csproj",
       "msbuildProject": "../Esports.Data/Esports.Data.csproj"
+    },
+    "ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../ViewModels/ViewModels.csproj",
+      "msbuildProject": "../ViewModels/ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11449,7 +11467,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.20",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.20",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.20",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
+      "ViewModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11482,6 +11501,9 @@
           "projectReferences": {
             "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data\\Esports.Data.csproj": {
               "projectPath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports.Data\\Esports.Data.csproj"
+            },
+            "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\ViewModels\\ViewModels.csproj": {
+              "projectPath": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\ViewModels\\ViewModels.csproj"
             }
           }
         }

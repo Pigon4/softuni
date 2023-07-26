@@ -30,9 +30,5 @@ namespace Esports.Data.Models
         public Guid TeamId { get; set; }
 
         public Teams Team { get; set; }
-
-
-
-
     }
 }

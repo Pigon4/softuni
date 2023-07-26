@@ -674,28 +674,47 @@ namespace Esports.Data.Migrations
 
             modelBuilder.Entity("Esports.Data.Models.UserPacks", b =>
                 {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("HasClaimedFreePack")
+                        .HasColumnType("bit");
 
                     b.Property<int>("PackId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId", "PackId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserPacks");
                 });
 
             modelBuilder.Entity("Esports.Data.Models.UserPlayers", b =>
                 {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<Guid>("PlayerId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId", "PlayerId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("PlayerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserPlayers");
                 });

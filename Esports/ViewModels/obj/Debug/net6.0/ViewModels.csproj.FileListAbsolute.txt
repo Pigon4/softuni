@@ -10,3 +10,6 @@ C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\obj\Debug\net6.0\ViewModel
 C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\obj\Debug\net6.0\refint\ViewModels.dll
 C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\obj\Debug\net6.0\ViewModels.pdb
 C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\obj\Debug\net6.0\ref\ViewModels.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\bin\Debug\net6.0\Esports.Data.dll
+C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\bin\Debug\net6.0\Esports.Data.pdb
+C:\Users\la4ez\Desktop\git\softuni\Esports\ViewModels\obj\Debug\net6.0\ViewModels.csproj.CopyComplete

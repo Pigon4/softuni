@@ -1,8 +1,36 @@
-﻿@{
+﻿@model UserPacksViewModel
+@{
     ViewBag.Title = "Packs";
 }
 
 <body>
-    <a asp-controller="Packs" asp-action="GetFreePack">GET FREE PACK</a>
+    <div class="container" id="box">
+        <h1>MY PACKS</h1>
+        @if (!Model.HasClaimedFreePack)
+        {
+            <a asp-controller="Packs" asp-action="GetFreePack">GET FREE PACK</a>
+        }
+        else
+        {
+            foreach(var item in Model.UserPacks.First().Value)
+            {
+                <ul>
+                    <li>@item 
+                        @if (item==0)
+                        {
+                            <a asp-controller="Packs" asp-action="OpenFreePack">&lt-- click to open!</a>
+                        }else
+                        {
+                            <a asp-controller="Packs" asp-action="OpenNormalPack">&lt-- click to open!</a>
+                        }
+                    </li>
+                </ul>
+            }
+
+        }
+
+    </div>
+
+    
 </body>
 

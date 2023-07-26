@@ -1,21 +1,23 @@
 ﻿using Esports.DataModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Esports.Data.Models
 {
     public class UserPacks
     {
+        [Key]
+        public int Id { get; set; }
         [ForeignKey(nameof(User))]
         [Required]
         public Guid UserId { get; set; }
         public ApplicationUser User { get; set; }
+
+        [Required]
+        public bool HasClaimedFreePack { get; set; } = false;
 
         public int PackId { get; set; }
     }

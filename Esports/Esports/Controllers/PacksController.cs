@@ -4,6 +4,7 @@ using Esports.Services;
 using Esports.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using ViewModels;
 
 namespace Esports.Controllers
 {
@@ -23,11 +24,32 @@ namespace Esports.Controllers
 
         public async Task<IActionResult> GetFreePack()
         {
-            var currUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
                 
-            await _packsService.GetFreePackAsync(Guid.Parse(currUserId));
+            await _packsService.GetFreePackAsync(currUserId);
 
             return RedirectToAction("Packs", "Home");
+        }
+
+        public async Task<IActionResult> OpenFreePack()
+        {
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            OpenedPackViewModel model;
+
+            model = await _packsService.OpenFreePackAsync(currUserId);
+
+
+            return RedirectToAction("RewardsFromPack", "Packs", new { model });
+        }
+
+        public async Task<IActionResult> OpenNormalPack()
+        {
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            OpenedPackViewModel model;
+
+            model = await _packsService.OpenNormalPackAsync(currUserId);
+
+            return RedirectToAction("RewardsFromPack", "Packs", new { model });
         }
     }
 }

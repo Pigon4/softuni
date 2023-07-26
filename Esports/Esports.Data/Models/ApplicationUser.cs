@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Esports.Data.Helpers;
 using Services;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Esports.DataModels
 {
@@ -20,6 +21,7 @@ namespace Esports.DataModels
         }
 
         public int Points { get; set; }
+
 
         public List<UserPlayers> UserPlayers { get; set; }
 

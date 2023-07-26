@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Esports.Data\Esports.Data.csproj" />
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

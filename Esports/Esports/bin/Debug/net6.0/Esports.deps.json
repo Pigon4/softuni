@@ -14,7 +14,8 @@
           "Microsoft.AspNetCore.Identity.UI": "6.0.20",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.20",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15",
+          "ViewModels": "1.0.0"
         },
         "runtime": {
           "Esports.dll": {}
@@ -2628,6 +2629,14 @@
         "runtime": {
           "Esports.Data.dll": {}
         }
+      },
+      "ViewModels/1.0.0": {
+        "dependencies": {
+          "Esports.Data": "1.0.0"
+        },
+        "runtime": {
+          "ViewModels.dll": {}
+        }
       }
     }
   },
@@ -4248,6 +4257,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Esports.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
