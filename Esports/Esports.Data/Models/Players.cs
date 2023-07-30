@@ -9,6 +9,10 @@ namespace Esports.Data.Models
 {
     public class Players
     {
+        public Players()
+        {
+            
+        }
         [Key]
         public Guid Id { get; set; }
         [Required]

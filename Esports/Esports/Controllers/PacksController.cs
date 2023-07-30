@@ -22,6 +22,13 @@ namespace Esports.Controllers
             return View();
         }
 
+        public IActionResult RewardsFromPack(int packId)
+        {
+
+
+            return View();
+        }
+
         public async Task<IActionResult> GetFreePack()
         {
             Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -34,22 +41,23 @@ namespace Esports.Controllers
         public async Task<IActionResult> OpenFreePack()
         {
             Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            OpenedPackViewModel model;
+            OpenedPackViewModel model = new OpenedPackViewModel();
 
             model = await _packsService.OpenFreePackAsync(currUserId);
 
 
-            return RedirectToAction("RewardsFromPack", "Packs", new { model });
+            return RedirectToAction("RewardsFromPack", "Packs", model );
         }
+
 
         public async Task<IActionResult> OpenNormalPack()
         {
             Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            OpenedPackViewModel model;
+            OpenedPackViewModel model = new OpenedPackViewModel();
 
             model = await _packsService.OpenNormalPackAsync(currUserId);
 
-            return RedirectToAction("RewardsFromPack", "Packs", new { model });
+            return RedirectToAction("RewardsFromPack", "Packs", model);
         }
     }
 }

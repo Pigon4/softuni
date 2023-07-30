@@ -12,7 +12,6 @@ namespace ViewModels
         [Required]
         [StringLength(50)]
         public string CountryOrigin { get; set; } = null!;
-        [Required]
         public byte[] Logo { get; set; }
 
         public int Titles { get; set; }

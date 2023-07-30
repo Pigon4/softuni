@@ -87,7 +87,7 @@ namespace Esports.Services
                     Position = item.Position,
                     Image = item.Image
                 });
-                await _context.UserPlayers.AddAsync(new UserPlayers {UserId=userId,Player = item,PlayerId = item.Id});
+                await _context.UserPlayers.AddAsync(new UserPlayers {UserId=userId,PlayerId = item.Id});
             }
             UserPacks up = await _context.UserPacks.FirstAsync(x => x.PackId == 0 && x.UserId == userId);
 
@@ -126,17 +126,9 @@ namespace Esports.Services
                     Nationality = item.Nationality,
                     Age = item.Age,
                     Position = item.Position,
-                    Image = item.Image,
-                    Team = new TeamViewModel
-                    {
-                        Name = item.Team.Name,
-                        CountryOrigin = item.Team.CountryOrigin,
-                        Logo = item.Team.Logo,
-                        Titles = item.Team.Titles
-
-                    }
+                    Image = item.Image
                 });
-                await _context.UserPlayers.AddAsync(new UserPlayers { UserId = userId, Player = item, PlayerId = item.Id });
+                await _context.UserPlayers.AddAsync(new UserPlayers { UserId = userId, PlayerId = item.Id });
             }
             UserPacks up = await _context.UserPacks.FirstAsync(x => x.PackId == 1 && x.UserId == userId);
 
