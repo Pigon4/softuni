@@ -10,9 +10,5 @@ namespace ViewModels
     public class UserPacksViewModel
     {
         public Dictionary<Guid, List<int>> UserPacks { get; set; }
-
-        [Required]
-        public bool HasClaimedFreePack { get; set; } = false;
-
     }
 }

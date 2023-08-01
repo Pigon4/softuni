@@ -17,5 +17,11 @@ namespace Esports.Controllers
         {
             return View();
         }
+
+        public IActionResult AddPlayer()
+        {
+
+            return View();
+        }
     }
 }

@@ -16,9 +16,6 @@ namespace Esports.Data.Models
         public Guid UserId { get; set; }
         public ApplicationUser User { get; set; }
 
-        [Required]
-        public bool HasClaimedFreePack { get; set; } = false;
-
         public int PackId { get; set; }
     }
 }

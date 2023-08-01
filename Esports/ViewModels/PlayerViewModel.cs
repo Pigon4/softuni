@@ -5,7 +5,14 @@ namespace ViewModels
 {
     public class PlayerViewModel
     {
+        [Required]
+        [MaxLength(100)]
         public string Name { get; set; } = null!;
+
+        [Required]
+        [MaxLength(50)]
+        public string Nickname { get; set; } = null!;
+
         [Required]
         [MaxLength(50)]
         public string Nationality { get; set; } = null!;

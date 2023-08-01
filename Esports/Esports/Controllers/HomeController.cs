@@ -36,11 +36,13 @@ namespace Esports.Controllers
         {
             Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             Dictionary<Guid, List<int>> dict = new Dictionary<Guid, List<int>>();
+
             dict.Add(currUserId, await _packService.GetAllPacksByUserIdAsync(currUserId));
+
             UserPacksViewModel model = new UserPacksViewModel {
-                UserPacks = dict,
-                HasClaimedFreePack = await _packService.HasClaimedFreePackAsync(currUserId)
+                UserPacks = dict
             };
+
             return View(model);
         }
         public IActionResult Live()

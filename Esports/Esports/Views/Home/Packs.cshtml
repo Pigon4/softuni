@@ -1,4 +1,11 @@
-﻿@model UserPacksViewModel
+﻿@using Esports.Services.Contracts
+@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> _userManager
+@model UserPacksViewModel
+
+@inject IPackService packsService
+@{
+    bool hasUserClaimedFreeReward = packsService.HasClaimedFreePack(Guid.Parse(_userManager.GetUserId(User)));
+}
 @{
     ViewBag.Title = "Packs";
 }
@@ -6,26 +13,29 @@
 <body>
     <div class="container" id="box">
         <h1>MY PACKS</h1>
-        @if (!Model.HasClaimedFreePack)
+        @if (!hasUserClaimedFreeReward)
         {
             <a asp-controller="Packs" asp-action="GetFreePack">GET FREE PACK</a>
         }
         else
         {
-            foreach(var item in Model.UserPacks.First().Value)
+            if (Model.UserPacks.Any())
             {
-                <ul>
-                    <li>@item 
-                        @if (item==0)
-                        {
-                            <a asp-controller="Packs" asp-action="OpenFreePack">&lt-- click to open!</a>
-                        }else
-                        {
-                            <a asp-controller="Packs" asp-action="OpenNormalPack">&lt-- click to open!</a>
-                        }
-                    </li>
-                </ul>
+                foreach (var item in Model.UserPacks.First().Value)
+                {
+                    <ul>
+                        <li>
+                            @item
+                            <a asp-controller="Packs" asp-action="RewardsFromPack" asp-route-packId="@item">&lt-- click to open!</a>
+                        </li>
+                    </ul>
+                }
             }
+            else
+            {
+                <div>Sorry u borke! </div>
+            }
+
 
         }
 

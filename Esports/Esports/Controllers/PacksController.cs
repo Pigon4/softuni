@@ -22,11 +22,22 @@ namespace Esports.Controllers
             return View();
         }
 
-        public IActionResult RewardsFromPack(int packId)
+        [HttpGet]
+        public async Task<IActionResult> RewardsFromPack(int packId)
         {
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            OpenedPackViewModel model = new OpenedPackViewModel();
 
-
-            return View();
+            if (packId == 0)
+            {
+                model = await _packsService.OpenFreePackAsync(currUserId);
+            }
+            else if (packId == 1)
+            {
+                model = await _packsService.OpenNormalPackAsync(currUserId);
+            }
+            
+            return View(model);
         }
 
         public async Task<IActionResult> GetFreePack()
@@ -38,26 +49,5 @@ namespace Esports.Controllers
             return RedirectToAction("Packs", "Home");
         }
 
-        public async Task<IActionResult> OpenFreePack()
-        {
-            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            OpenedPackViewModel model = new OpenedPackViewModel();
-
-            model = await _packsService.OpenFreePackAsync(currUserId);
-
-
-            return RedirectToAction("RewardsFromPack", "Packs", model );
-        }
-
-
-        public async Task<IActionResult> OpenNormalPack()
-        {
-            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            OpenedPackViewModel model = new OpenedPackViewModel();
-
-            model = await _packsService.OpenNormalPackAsync(currUserId);
-
-            return RedirectToAction("RewardsFromPack", "Packs", model);
-        }
     }
 }

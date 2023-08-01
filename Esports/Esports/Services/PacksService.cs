@@ -3,6 +3,7 @@ using Esports.Data.Models;
 using Esports.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Immutable;
+using System.Runtime.InteropServices;
 using ViewModels;
 
 namespace Esports.Services
@@ -19,7 +20,7 @@ namespace Esports.Services
         public async Task<List<int>> GetAllPacksByUserIdAsync(Guid UserId)
         {
             List<int> packIds = new List<int>();
-            foreach (var item in _context.UserPacks.Where(x => x.UserId == UserId).ToList())
+            foreach (var item in await _context.UserPacks.Where(x => x.UserId == UserId).ToListAsync())
             {
                 packIds.Add(item.PackId);
             }
@@ -30,8 +31,10 @@ namespace Esports.Services
         //id = 0
         public async Task GetFreePackAsync(Guid userId)
         {
-            UserPacks up = new UserPacks { UserId = userId, PackId = 0, HasClaimedFreePack=true };
+            UserPacks up = new UserPacks { UserId = userId, PackId = 0};
 
+
+            _context.Users.First(x => x.Id == userId).HasClaimedFreeReward = true;
 
             await _context.UserPacks.AddAsync(up);
             await _context.SaveChangesAsync();
@@ -41,7 +44,7 @@ namespace Esports.Services
         //id = 1 
         public async Task GetNormalPackAsync(Guid userId)
         {
-            UserPacks up = new UserPacks { UserId = userId, PackId = 1, HasClaimedFreePack = true };
+            UserPacks up = new UserPacks { UserId = userId, PackId = 1};
 
 
             await _context.UserPacks.AddAsync(up);
@@ -49,12 +52,11 @@ namespace Esports.Services
 
         }
 
-        public async Task<bool> HasClaimedFreePackAsync(Guid userId)
+        public bool HasClaimedFreePack(Guid userId)
         {
-            bool result = await _context.UserPacks.AsNoTracking()
-                .AnyAsync(x => x.HasClaimedFreePack == true);
+            bool result = _context.Users.First(x => x.Id == userId).HasClaimedFreeReward;
 
-            return result; 
+            return result;
         }
 
         public async Task<OpenedPackViewModel> OpenFreePackAsync(Guid userId)
@@ -82,6 +84,7 @@ namespace Esports.Services
             {
                 playerModel.Players.Add(new PlayerViewModel { 
                     Name = item.Name,
+                    Nickname = item.Nickname,
                     Nationality = item.Nationality,
                     Age = item.Age,
                     Position = item.Position,
@@ -104,7 +107,7 @@ namespace Esports.Services
             int number;
             OpenedPackViewModel playerModel = new OpenedPackViewModel();
             TeamViewModel teamViewModel = new TeamViewModel();
-            playerModel.Id = 0;
+            playerModel.Id = 1;
             playerModel.Name = "Normal Pack";
 
             number = rnd.Next(0, 50);
@@ -123,6 +126,7 @@ namespace Esports.Services
                 playerModel.Players.Add(new PlayerViewModel
                 {
                     Name = item.Name,
+                    Nickname=item.Nickname,
                     Nationality = item.Nationality,
                     Age = item.Age,
                     Position = item.Position,

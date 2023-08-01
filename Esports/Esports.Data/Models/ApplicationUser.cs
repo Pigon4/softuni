@@ -17,11 +17,13 @@ namespace Esports.DataModels
         public ApplicationUser() 
         {
             Points = 0;
+            HasClaimedFreeReward = false;
             Packs = new List<UserPacks>();
         }
 
         public int Points { get; set; }
 
+        public bool HasClaimedFreeReward { get; set; }
 
         public List<UserPlayers> UserPlayers { get; set; }
 
