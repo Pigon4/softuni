@@ -1,4 +1,8 @@
-﻿@model AddPlayerViewModel[]
+﻿@model List<AddPlayerViewModel>
+
+@using Esports.Data.Helpers.Contracts
+
+@inject IImageConverter imageConverter
 
 @{
     ViewBag.Title = "MyTeam";
@@ -16,14 +20,17 @@
         </div>
 
         <div class="openBox" id="popupbox">
-                <ul style="display:inline-grid">
+                <ul style="display:inline">
                     <li><button>TOP</button></li>
                     <li><button>JNG</button></li>
                     <li><button>MID</button></li>
                     <li><button>ADC</button></li>
                     <li><button>SUP</button></li>
                 </ul>
-
+                @foreach (var item in Model)
+                {
+                    <div style="width:20px; height:20px;"><img src="@imageConverter.ConvertToImage(item.Image)"></img> </div>
+                }
             <button id="closeBtn">add</button>
         </div>
 

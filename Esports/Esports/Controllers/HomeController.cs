@@ -11,11 +11,13 @@ namespace Esports.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IPackService _packService;
+        private readonly ITeamService _teamService;
 
-        public HomeController(ILogger<HomeController> logger, IPackService packService)
+        public HomeController(ILogger<HomeController> logger, IPackService packService, ITeamService teamService)
         {
             _logger = logger;
             _packService = packService;
+            _teamService = teamService;
         }
 
         public IActionResult Index()
@@ -23,9 +25,12 @@ namespace Esports.Controllers
             return View();
         }
 
-        public IActionResult MyTeam()
+        public async Task<IActionResult> MyTeam()
         {
-            return View();
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            List<AddPlayerViewModel> model = await _teamService.GetAllPlayersOfUserAsync(currUserId);
+
+            return View(model);
         }
 
         public IActionResult Leaderboards()

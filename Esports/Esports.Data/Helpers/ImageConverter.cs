@@ -3,22 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Esports.Data.Helpers
 {
     public class ImageConverter : IImageConverter
     {
-        public byte[] ConvertToByteArray(string path)
+        public async Task<byte[]> ConvertToByteArrayAsync(string path)
         {
             byte[] arr;
-            arr = File.ReadAllBytes(path);
+            arr = await File.ReadAllBytesAsync(path);
             return arr;
         }
 
-        public Task ConvertToImageAsync()
+        public string ConvertToImage(byte[] arr)
         {
-            throw new NotImplementedException();
+            string imreBase64Base = Convert.ToBase64String(arr);
+
+            return string.Format("data:image/png;base64,{0}", imreBase64Base);
         }
     }
 }

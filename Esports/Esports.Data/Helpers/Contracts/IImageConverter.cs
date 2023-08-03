@@ -8,7 +8,7 @@ namespace Esports.Data.Helpers.Contracts
 {
     public interface IImageConverter
     {
-        public byte[] ConvertToByteArray(string path);
-        public Task ConvertToImageAsync();
+        public Task<byte[]> ConvertToByteArrayAsync(string path);
+        public string ConvertToImage(byte[] arr);
     }
 }
