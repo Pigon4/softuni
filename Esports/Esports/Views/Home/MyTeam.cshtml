@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AddPlayerViewModel[]
+
+@{
     ViewBag.Title = "MyTeam";
 }
 
@@ -14,6 +16,14 @@
         </div>
 
         <div class="openBox" id="popupbox">
+                <ul style="display:inline-grid">
+                    <li><button>TOP</button></li>
+                    <li><button>JNG</button></li>
+                    <li><button>MID</button></li>
+                    <li><button>ADC</button></li>
+                    <li><button>SUP</button></li>
+                </ul>
+
             <button id="closeBtn">add</button>
         </div>
 
