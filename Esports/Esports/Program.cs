@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Esports.DataModels;
 using Esports.Services.Contracts;
 using Esports.Services;
+using Esports.Data.Helpers;
 using Esports.Data.Helpers.Contracts;
 
 namespace Esports
@@ -28,7 +29,7 @@ namespace Esports
 
             builder.Services.AddScoped<IPackService, PacksService>();
             builder.Services.AddScoped<ITeamService, TeamService>();
-            builder.Services.AddScoped<IImageConverter, IImageConverter>();
+            builder.Services.AddScoped<IImageConverter, ImageConverter>();
 
             var app = builder.Build();
 

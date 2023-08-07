@@ -28,9 +28,8 @@ namespace Esports.Controllers
         public async Task<IActionResult> MyTeam()
         {
             Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            List<AddPlayerViewModel> model = await _teamService.GetAllPlayersOfUserAsync(currUserId);
 
-            return View(model);
+            return View();
         }
 
         public IActionResult Leaderboards()

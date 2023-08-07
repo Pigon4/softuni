@@ -84,3 +84,8 @@ body {
     visibility: hidden;
 }
 
+#pic {
+    height: 15px;
+    width: 15px;
+}
+

@@ -30,7 +30,7 @@ namespace ViewModels
         [MaxLength(3)]
         public string Position { get; set; } = null!;
         [Required]
-        public byte[] Image { get; set; }
+        public string Image { get; set; } = null!;
         public Guid TeamId { get; set; }
 
         public Teams Team { get; set; }

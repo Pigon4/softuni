@@ -10,6 +10,12 @@ namespace Esports.Data.Helpers
 {
     public class ImageConverter : IImageConverter
     {
+        public byte[] ConvertToByteArray(string path)
+        {
+            byte[] arr;
+            arr = File.ReadAllBytes(path);
+            return arr;
+        }
         public async Task<byte[]> ConvertToByteArrayAsync(string path)
         {
             byte[] arr;
