@@ -6,5 +6,6 @@
         public Task<List<AddPlayerViewModel>> GetAllPlayersOfUserAsync(Guid userId);
         public Task<List<AddPlayerViewModel>> GetAllPlayersByPositionOfUserAsync(Guid userId, string position);
         public Task AddPlayerToTeamAsync(AddPlayerViewModel vm);
+        public Task<List<PlayerViewModel>> GetUserTeamPlayersAsync(List<Guid> ids);
     }
 }

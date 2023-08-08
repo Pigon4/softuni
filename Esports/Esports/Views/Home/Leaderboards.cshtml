@@ -8,8 +8,8 @@
         <ul>
             @foreach (var item in Model)
             {
-                <li><h3>@item.Username @item.Points</h3> </li>
-            }
+                <li><h3>@item.Username @item.Points <a asp-controller="Leaderboards" asp-action="Inspect" asp-route-userId="Guid.Parse(_userManager.GetUserId(User))">Inspect</a></h3> </li>
+            } 
 
         </ul>
 

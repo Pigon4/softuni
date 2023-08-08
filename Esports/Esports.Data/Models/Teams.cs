@@ -9,6 +9,10 @@ namespace Esports.Data.Models
 {
     public class Teams
     {
+        public Teams()
+        {
+            Players = new HashSet<Players>();
+        }
         [Key]
         public Guid Id { get; set; }
         [Required]

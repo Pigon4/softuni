@@ -1,5 +1,7 @@
 ﻿@model InspectUserViewModel
 
+@inject IImageConverter _imageConverter
+
 @{
     ViewBag.Title = "Inspect";
 }
@@ -7,7 +9,10 @@
     <div class="container" id="box">
         <div>@Model.Username</div>
         <ul>
-
+            @foreach (var item in Model.Team)
+            {
+                <li><img style="width:30px; height:30px;" src="@_imageConverter.ConvertToImage(item.Image)">@item.Nickname </li>
+            }
         </ul>
     </div>
 </body>

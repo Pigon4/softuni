@@ -28,7 +28,6 @@ namespace Esports.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            
             Assembly configAssembly = Assembly.GetAssembly(typeof(EsportsDbContext)) ??
                                         Assembly.GetExecutingAssembly();
             builder.ApplyConfigurationsFromAssembly(typeof(EsportsDbContext).Assembly);

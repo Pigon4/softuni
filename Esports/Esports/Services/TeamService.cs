@@ -73,5 +73,22 @@ namespace Esports.Services
 
             return players;
         }
+
+        public async Task<List<PlayerViewModel>> GetUserTeamPlayersAsync(List<Guid> ids)
+        {
+            List<PlayerViewModel> players = new List<PlayerViewModel>();
+            foreach (var item in ids)
+            {
+                var player = await _context.Players.FirstOrDefaultAsync(x => x.Id == item);
+                players.Add(new PlayerViewModel
+                {
+                    Image = player.Image,
+                    Nickname = player.Nickname,
+                    Position = player.Position
+                });
+            }
+
+            return players;
+        }
     }
 }

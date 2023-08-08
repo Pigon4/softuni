@@ -19,6 +19,7 @@ namespace Esports.DataModels
             Points = 0;
             HasClaimedFreeReward = false;
             Packs = new List<UserPacks>();
+            UserTeam = new HashSet<UserTeams>();
         }
 
         public int Points { get; set; }
@@ -26,6 +27,8 @@ namespace Esports.DataModels
         public bool HasClaimedFreeReward { get; set; }
 
         public List<UserPlayers> UserPlayers { get; set; }
+
+        public IEnumerable<UserTeams> UserTeam { get; set; }
 
         public List<UserPacks> Packs { get; set; }
 

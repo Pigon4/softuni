@@ -9,10 +9,12 @@ namespace Esports.Services
     public class LeaderboardsService : ILeadearboardsService
     {
         private readonly EsportsDbContext _context;
+        private readonly ITeamService _teamService;
 
-        public LeaderboardsService(EsportsDbContext context)
+        public LeaderboardsService(EsportsDbContext context, ITeamService teamService)
         {
               _context = context;
+            _teamService = teamService;
         }
 
         public async Task<List<UserViewModel>> GetTopTenAsync()
@@ -34,19 +36,30 @@ namespace Esports.Services
 
         public async Task<InspectUserViewModel> GetUserToInspectAsync(Guid userId)
         {
+            List<Guid> ids = new List<Guid>();
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.TopId).FirstAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.JngId).FirstAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.MidId).FirstAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.AdcId).FirstAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.SupId).FirstAsync());
+            List<PlayerViewModel> players = await _teamService.GetUserTeamPlayersAsync(ids);
+
             InspectUserViewModel ins = await _context.Users
                 .Where(x => x.Id == userId)
                 .Select(x => new InspectUserViewModel
                 {
                     Username = x.UserName,
-                    Points = x.Points
+                    Points = x.Points,
+                    Team = players
 
                 }).FirstAsync();
-                
-                
-                
-                
-            throw new NotImplementedException();
+
+            return ins;
         }
     }
 }

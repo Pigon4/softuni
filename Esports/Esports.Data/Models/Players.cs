@@ -36,7 +36,6 @@ namespace Esports.Data.Models
         [Required]
         public byte[] Image { get; set; }
         public Guid TeamId { get; set; }
-
         public Teams Team { get; set; }
     }
 }

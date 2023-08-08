@@ -4,6 +4,7 @@ using Esports.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Esports.Data.Migrations
 {
     [DbContext(typeof(EsportsDbContext))]
-    partial class EsportsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230808132015_addedDeleteBehaviorToUserTeams")]
+    partial class addedDeleteBehaviorToUserTeams
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

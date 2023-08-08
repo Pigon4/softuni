@@ -9,11 +9,15 @@ namespace ViewModels
 {
     public class InspectUserViewModel
     {
+        public InspectUserViewModel()
+        {
+            Team = new List<PlayerViewModel>();
+        }
         [Required]
         public string Username { get; set; } = null!;
         [Required]
         public int Points { get; set; }
 
-        public MyTeamViewModel? Team{ get; set; }
+        public List<PlayerViewModel> Team { get; set; }
     }
 }
