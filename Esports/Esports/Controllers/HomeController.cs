@@ -12,12 +12,14 @@ namespace Esports.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IPackService _packService;
         private readonly ITeamService _teamService;
+        private readonly ILeadearboardsService _leaderboardsService;
 
-        public HomeController(ILogger<HomeController> logger, IPackService packService, ITeamService teamService)
+        public HomeController(ILogger<HomeController> logger, IPackService packService, ITeamService teamService, ILeadearboardsService leaderboardsService)
         {
             _logger = logger;
             _packService = packService;
             _teamService = teamService;
+            _leaderboardsService = leaderboardsService;
         }
 
         public IActionResult Index()
@@ -32,9 +34,11 @@ namespace Esports.Controllers
             return View();
         }
 
-        public IActionResult Leaderboards()
+        public async Task<IActionResult> Leaderboards()
         {
-            return View();
+            List<UserViewModel> topTen = await _leaderboardsService.GetTopTenAsync();
+
+            return View(topTen);
         }
         public async Task<IActionResult> Packs()
         {

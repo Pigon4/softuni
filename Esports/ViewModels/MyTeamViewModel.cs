@@ -10,10 +10,10 @@ namespace ViewModels
     public class MyTeamViewModel
     {
         public Guid UserId { get; set; }
-        public Guid TopId { get; set; }
-        public Guid JngId { get; set; }
-        public Guid MidId { get; set; }
-        public Guid AdcId { get; set; }
-        public Guid SupId { get; set; }
+        public PlayerViewModel Top { get; set; }
+        public PlayerViewModel Jng { get; set; }
+        public PlayerViewModel Mid { get; set; }
+        public PlayerViewModel Adc { get; set; }
+        public PlayerViewModel Sup { get; set; }
     }
 }

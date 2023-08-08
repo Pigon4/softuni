@@ -1,5 +1,17 @@
-﻿@{
+﻿@model List<UserViewModel>
+@{
     ViewBag.Title = "Leaderboards";
 }
 
-<div>LEADERBOARDS</div>
+<body>
+    <div class="container" id="box">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><h3>@item.Username @item.Points</h3> </li>
+            }
+
+        </ul>
+
+   </div>
+</body>

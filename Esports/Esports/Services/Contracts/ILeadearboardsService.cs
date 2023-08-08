@@ -1,7 +1,9 @@
-﻿namespace Esports.Services.Contracts
+﻿using ViewModels;
+namespace Esports.Services.Contracts
 {
     public interface ILeadearboardsService
     {
-        public Task GetTopTenAsync();
+        public Task<List<UserViewModel>> GetTopTenAsync();
+        public Task<InspectUserViewModel> GetUserToInspectAsync(Guid userId);
     }
 }
