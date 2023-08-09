@@ -42,9 +42,20 @@ namespace Esports.Services
 
             return players;
         }
-        public Task AddPlayerToTeamAsync(AddPlayerViewModel vm)
+
+        public async Task AddPlayerToTeamAsync(string name, Guid userId)
         {
-            throw new NotImplementedException();
+            Players player = await  _context.Players.FirstAsync(x => x.Nickname == name);
+            switch (player.Position)
+            {
+                case "top": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, TopId = player.Id }); break;
+                case "jng": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, JngId = player.Id }); break;
+                case "mid": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, MidId = player.Id }); break;
+                case "adc": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, AdcId = player.Id }); break;
+                case "sup": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, SupId = player.Id }); break;
+            }
+            
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<AddPlayerViewModel>> GetAllPlayersByPositionOfUserAsync(Guid userId, string position)
@@ -79,16 +90,49 @@ namespace Esports.Services
             List<PlayerViewModel> players = new List<PlayerViewModel>();
             foreach (var item in ids)
             {
-                var player = await _context.Players.FirstOrDefaultAsync(x => x.Id == item);
-                players.Add(new PlayerViewModel
+                if (item != Guid.Parse("00000000-0000-0000-0000-000000000000"))
                 {
-                    Image = player.Image,
-                    Nickname = player.Nickname,
-                    Position = player.Position
-                });
+                    var player = await _context.Players.FirstOrDefaultAsync(x => x.Id == item);
+                    players.Add(new PlayerViewModel
+                    {
+                        Image = player.Image,
+                        Nickname = player.Nickname,
+                        Position = player.Position
+                    });
+                }
+
             }
 
             return players;
+        }
+
+        public async Task<MyTeamViewModel> GetUserTeamAsync(Guid userId)
+        {
+            MyTeamViewModel team = new MyTeamViewModel();
+            List<Guid> ids = new List<Guid>();
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.TopId).FirstOrDefaultAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.JngId).FirstOrDefaultAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.MidId).FirstOrDefaultAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.AdcId).FirstOrDefaultAsync());
+            ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
+                .Select(x => x.SupId).FirstOrDefaultAsync());
+            if (ids.Any(x => x != Guid.Parse("00000000-0000-0000-0000-000000000000")))
+            {
+                List<PlayerViewModel> players = await GetUserTeamPlayersAsync(ids);
+
+                team.Top = players.FirstOrDefault(x => x.Position == "top");
+                team.Jng = players.FirstOrDefault(x => x.Position == "jng");
+                team.Mid = players.FirstOrDefault(x => x.Position == "mid");
+                team.Adc = players.FirstOrDefault(x => x.Position == "adc");
+                team.Sup = players.FirstOrDefault(x => x.Position == "sup");
+            }
+
+
+           return team;
         }
     }
 }

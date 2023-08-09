@@ -19,6 +19,24 @@ closeBtn.addEventListener("click", () => {
     popupbox.classList.remove("open");
 });
 
+function AddPlayer(name) {
+
+    $.ajax({
+        url: "/UserTeam/AddPlayer",
+        type: "GET",
+        datatype: "text",
+        data: { 'plName': name },
+        success: function (data) {
+            location.reload();
+        },
+        error: function () {
+
+        }
+    })
+
+
+}
+
 
 $("#topBtn").unbind("click").bind("click", () => {
     $.ajax({
@@ -29,7 +47,7 @@ $("#topBtn").unbind("click").bind("click", () => {
         success: function (data) {
             var htmlString = "";
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\"></img><div style:absolute>" + data[i].nickname + "</div> "
+                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname +"\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "
             }
 
             target.innerHTML = htmlString;

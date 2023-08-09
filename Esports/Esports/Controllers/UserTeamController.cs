@@ -22,12 +22,6 @@ namespace Esports.Controllers
         }
 
 
-        public IActionResult AddPlayer()
-        {
-
-            return View();
-        }
-
         [HttpPost]
         public async Task<JsonResult> UserPlayers(string position)
         {
@@ -38,6 +32,15 @@ namespace Esports.Controllers
 
 
             return new JsonResult(players);
+        }
+
+        [HttpGet]
+        public async Task<string> AddPlayer(string plName)
+        {
+            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            await _teamService.AddPlayerToTeamAsync(plName, currUserId);
+
+            return "success";
         }
 
     }
