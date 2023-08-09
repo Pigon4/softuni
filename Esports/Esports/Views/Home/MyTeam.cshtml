@@ -12,8 +12,12 @@
 <div class="container" id="box">
     <div class="box">
         <div class="content">
-
-            <button id="Add-Player-Button">+</button>
+            @if (Model.Top != null){
+                    <img src="@imageConverter.ConvertToImage(@Model.Top.Image)"></img>
+            }else{
+                    <button id="Add-Player-Button">+</button>
+            }
+           
             <button id="Add-Player-Button">+</button>
             <button id="Add-Player-Button">+</button>
             <button id="Add-Player-Button">+</button>
