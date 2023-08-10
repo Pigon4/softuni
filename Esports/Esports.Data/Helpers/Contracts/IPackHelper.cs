@@ -9,7 +9,7 @@ namespace Services.Contracts
 {
     public interface IPackHelper
     {
-        public List<Players> GetStarterPack();
+        public List<Player> GetStarterPack();
 
     }
 }

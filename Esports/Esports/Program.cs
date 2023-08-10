@@ -23,9 +23,15 @@ namespace Esports
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
+            {
+                options.SignIn.RequireConfirmedEmail = false;
+                options.Password.RequiredLength = 8;
+
+            
+            })
                 .AddEntityFrameworkStores<EsportsDbContext>();
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(); 
 
             builder.Services.AddScoped<IPackService, PacksService>();
             builder.Services.AddScoped<ITeamService, TeamService>();

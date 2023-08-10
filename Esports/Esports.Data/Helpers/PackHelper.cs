@@ -17,9 +17,9 @@ namespace Services
         {
 
         }
-        public List<Players> GetStarterPack()
+        public List<Player> GetStarterPack()
         {
-            List<Players> players = new List<Players>();
+            List<Player> players = new List<Player>();
                 Random rnd = new Random();
                 int number = rnd.Next(0,10);
             players.Add(_context.Players.Where(x => x.Position == "top")

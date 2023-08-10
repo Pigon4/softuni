@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Esports.Data.Models
 {
-    public class Teams
+    public class Team
     {
-        public Teams()
+        public Team()
         {
-            Players = new HashSet<Players>();
+            Players = new HashSet<Player>();
         }
         [Key]
         public Guid Id { get; set; }
@@ -25,7 +25,7 @@ namespace Esports.Data.Models
         public byte[] Logo { get; set; }
 
         public int Titles { get; set; }
-        public ICollection<Players> Players { get; set; }
+        public ICollection<Player> Players { get; set; }
 
     }
 }

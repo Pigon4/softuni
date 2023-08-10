@@ -70,8 +70,7 @@ $("#jngBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\"></img><div style:absolute>" + data[i].nickname + "</div> "
-            }
+                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
 
             target.innerHTML = htmlString;
         },
@@ -91,8 +90,7 @@ $("#midBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\"></img><div style:absolute>" + data[i].nickname + "</div> "
-            }
+                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
 
             target.innerHTML = htmlString;
         },
@@ -112,8 +110,7 @@ $("#adcBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\"></img><div style:absolute>" + data[i].nickname + "</div> "
-            }
+                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
 
             target.innerHTML = htmlString;
         },
@@ -133,8 +130,7 @@ $("#supBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\"></img><div style:absolute>" + data[i].nickname + "</div> "
-            }
+                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
 
             target.innerHTML = htmlString;
         },

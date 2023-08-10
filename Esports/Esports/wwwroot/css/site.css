@@ -18,7 +18,7 @@ body {
     overflow: hidden;
 }
 
-#background_image {
+#background-image {
     background-image:url('../drakos.gif');
     background-size:cover;
     
@@ -26,19 +26,22 @@ body {
 
 #header {
     width: 100%;
-    width: inherit;
     height: 50px;
     background-color:black;
 }
-#header_list_group_item {
+#header-list-group-item {
     width: auto;
     margin-left: 15px;
     background: none;
     border:none;
     color: white;
     font: bold;
+    top: 10px;
+    text-decoration:none;
     text-align: left;
+    display: inline;
 }
+
 
 #box {
     background: rgba(0,0,0,0.9);
@@ -54,17 +57,11 @@ body {
     text-decoration:none;
     color:white;
     font:bold;
+    background: none;
+    border: none;
 }
 
-#Add-Player-Button {
-    background-color: black;
-    border-style: dashed;
-    border-color: dimgray;
-    width: 200px;
-    height: 300px;
-    margin: 25px;
-    color: white;
-}
+
 
 #popupbox {
     z-index: 9999;
@@ -77,6 +74,42 @@ body {
     left: 545px;
     visibility: hidden;
 }
+
+#Add-Player-Button {
+    position: initial;
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    color: white;
+}
+
+#team-player-ingamename {
+    color: white;
+    position: absolute;
+    top: 77%;
+    font-size: x-large;
+}
+
+#image-text-container {
+    position: relative;
+    color: white;
+    background-color: black;
+    margin: 25px;
+    width: 200px;
+    height: 250px;
+    border-style: dashed;
+    border-color: white;
+    flex: 10%;
+    padding: 5px;
+}
+#team-image {
+    position: relative;
+    left: -13px;
+    
+}
 #popupbox.open {
     visibility: visible;
 }
@@ -88,4 +121,11 @@ body {
     height: 50px;
     width: 50px;
 }
+
+#row {
+    display: flex;
+}
+
+
+
 

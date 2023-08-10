@@ -62,7 +62,7 @@ namespace Esports.Services
         public async Task<OpenedPackViewModel> OpenFreePackAsync(Guid userId)
         {
             Random rnd = new Random();
-            List<Players> players = new List<Players>();
+            List<Player> players = new List<Player>();
             int number;
             OpenedPackViewModel playerModel = new OpenedPackViewModel();
             TeamViewModel teamViewModel = new TeamViewModel();
@@ -103,7 +103,7 @@ namespace Esports.Services
         public async Task<OpenedPackViewModel> OpenNormalPackAsync(Guid userId)
         {
             Random rnd = new Random();
-            List<Players> players = new List<Players>();
+            List<Player> players = new List<Player>();
             int number;
             OpenedPackViewModel playerModel = new OpenedPackViewModel();
             TeamViewModel teamViewModel = new TeamViewModel();

@@ -26,7 +26,7 @@ namespace Esports.Services
                 .Distinct().ToArrayAsync();
             foreach (Guid id in ids)
             {
-                Players player = await _context.Players.FirstAsync(x => x.Id == id);
+                Player player = await _context.Players.FirstAsync(x => x.Id == id);
                 players.Add(new AddPlayerViewModel
                 {
                     Id = player.Id,
@@ -45,15 +45,31 @@ namespace Esports.Services
 
         public async Task AddPlayerToTeamAsync(string name, Guid userId)
         {
-            Players player = await  _context.Players.FirstAsync(x => x.Nickname == name);
-            switch (player.Position)
+            Player player = await  _context.Players.FirstAsync(x => x.Nickname == name);
+            if (_context.UserTeams.Any(x => x.UserId==userId))
             {
-                case "top": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, TopId = player.Id }); break;
-                case "jng": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, JngId = player.Id }); break;
-                case "mid": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, MidId = player.Id }); break;
-                case "adc": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, AdcId = player.Id }); break;
-                case "sup": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, SupId = player.Id }); break;
+                UserTeams ut = await _context.UserTeams.FirstAsync(x => x.UserId == userId);
+                switch (player.Position)
+                {
+                    case "top": ut.TopId = player.Id; _context.UserTeams.Update(ut); break;
+                    case "jng": ut.JngId = player.Id; _context.UserTeams.Update(ut); break;
+                    case "mid": ut.MidId = player.Id; _context.UserTeams.Update(ut); break;
+                    case "adc": ut.AdcId = player.Id; _context.UserTeams.Update(ut); break;
+                    case "sup": ut.SupId = player.Id; _context.UserTeams.Update(ut); break;
+                }
             }
+            else
+            {
+                switch (player.Position)
+                {
+                    case "top": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, TopId = player.Id }); break;
+                    case "jng": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, JngId = player.Id }); break;
+                    case "mid": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, MidId = player.Id }); break;
+                    case "adc": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, AdcId = player.Id }); break;
+                    case "sup": await _context.UserTeams.AddAsync(new UserTeams { UserId = userId, SupId = player.Id }); break;
+                }
+            }
+
             
             await _context.SaveChangesAsync();
         }
@@ -68,7 +84,7 @@ namespace Esports.Services
                 .Distinct().ToArrayAsync();
             foreach (Guid id in ids)
             {
-                Players player = await _context.Players.FirstAsync(x => x.Id == id);
+                Player player = await _context.Players.FirstAsync(x => x.Id == id);
                 players.Add(new AddPlayerViewModel
                 {
                     Id = player.Id,

@@ -16,9 +16,9 @@ namespace Esports.Data
 
         }
 
-        public DbSet<Players> Players { get; set; } = null!;
+        public DbSet<Player> Players { get; set; } = null!;
 
-        public DbSet<Teams> Teams { get; set; } = null!;
+        public DbSet<Team> Teams { get; set; } = null!;
 
         public DbSet<UserTeams> UserTeams { get; set; } = null!;
         public DbSet<UserPacks> UserPacks { get; set; } = null!;

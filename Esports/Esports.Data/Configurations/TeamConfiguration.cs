@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Esports.Data.Configurations
 {
-    public class TeamConfiguration : IEntityTypeConfiguration<Teams>
+    public class TeamConfiguration : IEntityTypeConfiguration<Team>
     {
-        public void Configure(EntityTypeBuilder<Teams> builder)
+        public void Configure(EntityTypeBuilder<Team> builder)
         {
             builder.HasMany(t => t.Players)
                 .WithOne(t => t.Team)
@@ -16,13 +16,13 @@ namespace Esports.Data.Configurations
             builder.HasData(GenerateTeams());
         }
 
-        public List<Teams> GenerateTeams()
+        public List<Team> GenerateTeams()
         {
-            List<Teams> teams = new List<Teams>();
+            List<Team> teams = new List<Team>();
             ImageConverter converter = new ImageConverter();
             
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("f82a5401-0df9-4219-a9c3-c963e1168dbf"),
                 Name = "Fnatic",
@@ -32,7 +32,7 @@ namespace Esports.Data.Configurations
                 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("8fdde911-0ac5-4704-b26d-4efabc8d033c"),
                 Name = "G2",
@@ -42,7 +42,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("ff55afe4-6156-4ce3-b848-a1d0a7472248"),
                 Name = "Mad Lions",
@@ -52,7 +52,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("fea8fd74-d07e-4521-ad82-ba2fa2c270cb"),
                 Name = "KOI",
@@ -62,7 +62,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("0452bb8c-4c13-400a-846e-81cfa0193185"),
                 Name = "Excel",
@@ -72,7 +72,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("647b6346-dd83-4cf2-aed0-222d9f104e5f"),
                 Name = "Astralis",
@@ -82,7 +82,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("79fc23d1-4fca-4b75-a2f2-291ea4a2c777"),
                 Name = "Team BDS",
@@ -92,7 +92,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("26011ad9-f7c3-4046-887c-2408cb5a4e92"),
                 Name = "SK Gaming",
@@ -102,7 +102,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("9215d293-4a88-4da2-abfe-f5d4bf824602"),
                 Name = "Team Heretics",
@@ -112,7 +112,7 @@ namespace Esports.Data.Configurations
 
             });
 
-            teams.Add(new Teams
+            teams.Add(new Team
             {
                 Id = Guid.Parse("914c7452-ce34-4162-a7f4-c364234b17ea"),
                 Name = "Team Vitality",

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Esports.Data.Models
 {
-    public class Players
+    public class Player
     {
-        public Players()
+        public Player()
         {
             
         }
@@ -36,6 +36,6 @@ namespace Esports.Data.Models
         [Required]
         public byte[] Image { get; set; }
         public Guid TeamId { get; set; }
-        public Teams Team { get; set; }
+        public Team Team { get; set; }
     }
 }
