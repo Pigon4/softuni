@@ -18,10 +18,30 @@ body {
     overflow: hidden;
 }
 
+#login-register-fields {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: dimgray;
+    border-color: darkgray;
+    color: white;
+}
+
+#login-submit {
+    background-color: steelblue;
+}
+
+#registerSubmit {
+    background-color: steelblue;
+}
+
 #background-image {
-    background-image:url('../drakos.gif');
-    background-size:cover;
-    
+    background-image: url('../SortedOutBackground.png');
+    background-size: cover;
+}
+
+#login-register-background-image {
+    background-image: url('../loginRegister.png');
+    background-size: cover;
 }
 
 #header {

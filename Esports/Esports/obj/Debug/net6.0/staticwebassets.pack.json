@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Esports.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\SortedOutBackground.png",
+      "PackagePath": "staticwebassets\\SortedOutBackground.png"
+    },
+    {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -247,6 +251,10 @@
     {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\loginRegister.png",
+      "PackagePath": "staticwebassets\\loginRegister.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Esports.Microsoft.AspNetCore.StaticWebAssets.props",

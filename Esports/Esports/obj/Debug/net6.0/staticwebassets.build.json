@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G8HatfsjH0mzSURy1UVoCJLwuLDFtfnjLFSuo/FKurg=",
+  "Hash": "RPGh8lfHUVYd62jJQ/a6kvsjkoTEubk142uWXiNnXxc=",
   "Source": "Esports",
   "BasePath": "_content/Esports",
   "Mode": "Default",
@@ -2106,6 +2106,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\loginRegister.png",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "loginRegister.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\loginRegister.png"
+    },
+    {
+      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\SortedOutBackground.png",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "SortedOutBackground.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\SortedOutBackground.png"
     }
   ]
 }
