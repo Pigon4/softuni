@@ -65,10 +65,12 @@ body {
 
 #popupbox {
     z-index: 9999;
-    width: 400px;
+    width: 440px;
     height: 500px;
     background-color: black;
     color: white;
+    border-style: solid;
+    border-color: dimgray;
     position: fixed;
     top: 110px;
     left: 545px;
@@ -91,6 +93,7 @@ body {
     position: absolute;
     top: 77%;
     font-size: x-large;
+    font: bold;
 }
 
 #image-text-container {
@@ -115,7 +118,16 @@ body {
     visibility: visible;
 }
 #close-popup-box {
-    visibility: hidden;
+    position: absolute;
+    color: white;
+    width: 10px;
+    height: 10px;
+    bottom: 25px;
+    right: 55%;
+    font-size: large;
+    font: bolder;
+    border: none;
+    background:none;
 }
 
 
@@ -130,7 +142,7 @@ body {
 
 #roles-btn-container {
     position: absolute;
-    left: 6%;
+    left: 8%;
 }
 
 .roles-team-btn {
@@ -154,7 +166,12 @@ body {
 #target {
     position: relative;
     top: 50px;
+    margin-left:20px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    gap: 10px 10px;
 }
 
 #popup-image-text-container {
@@ -163,18 +180,41 @@ body {
     background-color: black;
     width: 100px;
     height: 125px;
+    padding: 5px;
     flex: 5%;
 }
 
-#team-image {
+#team-popupbox-image {
     height: 100px;
     width: 125px;
+}
+
+#popup-help-text {
+    color: slategray;
+    font-size: small;
+    position: absolute;
+    bottom: 35px;
+    right: 35%;
 }
 
 
 
 #name {
+    color: lightgray;
+    position: absolute;
+    top: 67%;
+    font-size: medium;
+}
 
+#team-rules-points-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#team-rules-text {
+    flex: 1%;
 }
 
 

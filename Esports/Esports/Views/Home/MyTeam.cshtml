@@ -1,11 +1,14 @@
 ﻿@model MyTeamViewModel
+@inject Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> _userManager
 
 @using Esports.Data.Helpers.Contracts
 
 @inject IImageConverter imageConverter
+@inject IUserService userService
 
 @{
     ViewBag.Title = "MyTeam";
+    ViewBag.Points = await userService.GetUserPointsAsync(Guid.Parse(_userManager.GetUserId(User)));
 }
 
 <body>
@@ -55,8 +58,27 @@
             }
 
         </div>
+        <hr style="height: 4px;">
+
+        <div id="team-rules-points-container">
+                <div id="team-rules-text" style="color: white">
+                Your Points!
+                    <h1 style="color: white">@ViewBag.Points</h1>
+            </div>
+                <div id="team-rules-text">
+                    <h1 style ="color: white">Rules</h1>
+                <div>
+                        <h6>1. Teams are one per tournament. You can not edit your team until the tournament has finished, at which time your team is wiped.</h6>
+                        <h6>2. You can only create a team only when a tournament isn't going.</h6>
+                        <h6>3. You earn point based on how many games players currently fielded in have won during the tournament.</h6>
+
+                </div>
+            </div>
+        </div>
 
         <div class="openBox" id="popupbox">
+                <button id="close-popup-box">Close</button>
+                <div id="popup-help-text">Click on a image to add!</div>
                 <ul id="roles-btn-container">
                     <li style="display: inline"><button class="roles-team-btn" id="topBtn">TOP</button></li>
                     <li style="display: inline"><button class="roles-team-btn" id="jngBtn">JNG</button></li>

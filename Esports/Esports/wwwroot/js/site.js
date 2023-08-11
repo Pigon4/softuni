@@ -5,6 +5,7 @@
 
 var popupbox = document.getElementById("popupbox");
 var openBtn = document.getElementById("Add-Player-Button");
+var closeBtn = document.getElementById("close-popup-box");
 
 var target = document.getElementById("target");
 
@@ -13,6 +14,12 @@ var target = document.getElementById("target");
 openBtn.addEventListener("click", () => {
     popupbox.classList.add("open");
 });
+
+closeBtn.addEventListener("click", () => {
+    popupbox.classList.remove("open");
+});
+
+
 
 
 
@@ -44,7 +51,7 @@ $("#topBtn").unbind("click").bind("click", () => {
         success: function (data) {
             var htmlString = "";
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname +"\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-popupbox-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname +"\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"
             }
 
             target.innerHTML = htmlString;
@@ -70,7 +77,7 @@ $("#jngBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"  }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-popupbox-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"  }
 
             target.innerHTML = htmlString;
         },
@@ -93,7 +100,7 @@ $("#midBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-popupbox-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },
@@ -116,7 +123,7 @@ $("#adcBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-popupbox-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },
@@ -139,7 +146,7 @@ $("#supBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-popupbox-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },

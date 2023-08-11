@@ -39,6 +39,7 @@ namespace Esports
             builder.Services.AddScoped<ITeamService, TeamService>();
             builder.Services.AddScoped<IImageConverter, ImageConverter>();
             builder.Services.AddScoped<ILeadearboardsService, LeaderboardsService>();
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 
