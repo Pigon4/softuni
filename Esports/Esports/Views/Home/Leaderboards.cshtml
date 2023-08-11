@@ -5,11 +5,19 @@
 
 <body>
     <div class="container" id="box">
-        <ul>
-            @foreach (var item in Model)
+        <ul id="lb-table">
+            
+            @for (int i = 0; i < Model.Count; i++)
             {
-                <li><h3>@item.Username @item.Points <a asp-controller="Leaderboards" asp-action="Inspect" asp-route-userId="Guid.Parse(_userManager.GetUserId(User))">Inspect</a></h3> </li>
-            } 
+                var result = i + 1;
+                <li id="lb-table-items">
+                    <div style="display: inline-block">
+                        <h3 id="lb-table-items-elements" style="width: 500px;">@result @Model[i].Username </h3>
+                        <h3 id="lb-table-items-elements" style="width: 500px;">@Model[i].Points </h3>
+                        <a id="lb-table-items-elements" style="margin-left: 80px" asp-controller="Leaderboards" asp-action="Inspect" asp-route-userId="@Model[i].Id">Inspect</a>
+                    </div>
+                </li>
+            }
 
         </ul>
 

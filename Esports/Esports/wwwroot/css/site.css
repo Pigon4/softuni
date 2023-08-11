@@ -217,6 +217,34 @@ body {
     flex: 1%;
 }
 
+#lb-table {
+    position: absolute;
+    margin: 25px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#lb-table-items {
+    color: white;
+    list-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: gray;
+    font: bold;
+    flex: 1%;
+}
+
+#lb-table-items-elements {
+    display: inline-block;
+}
+
+
 
 
 
