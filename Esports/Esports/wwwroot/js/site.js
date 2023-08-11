@@ -5,25 +5,47 @@
 
 var popupbox = document.getElementById("popupbox");
 var closeBtn = document.getElementById("close-popup-box");
+var openTopButton = document.getElementById("Add-Player-Button-Top");
+var openJngButton = document.getElementById("Add-Player-Button-Jng");
+var openMidButton = document.getElementById("Add-Player-Button-Mid");
+var openAdcButton = document.getElementById("Add-Player-Button-Adc");
+var openSupButton = document.getElementById("Add-Player-Button-Sup");
 
 var target = document.getElementById("target");
 
-$("Add-Player-Button-Top").bind("click", () => {
-    popupbox.classList.add("open");
-})
-$("Add-Player-Button-Jng").bind("click", () => {
-    popupbox.classList.add("open");
-})
-$("Add-Player-Button-Mid").bind("click", () => {
-    popupbox.classList.add("open");
-})
-$("Add-Player-Button-Adc").bind("click", () => {
-    popupbox.classList.add("open");
-})
-$("Add-Player-Button-Sup").bind("click", () => {
-    popupbox.classList.add("open");
-})
+if (openTopButton != null) {
+    openTopButton.addEventListener("click", () => {
+        popupbox.classList.add("open");
+    });
+}
 
+if (openJngButton!= null) {
+    openJngButton.addEventListener("click", () => {
+        popupbox.classList.add("open");
+    });
+}
+
+if (openMidButton != null) {
+    openMidButton.addEventListener("click", () => {
+        popupbox.classList.add("open");
+    });
+}
+
+if (openAdcButton != null) {
+    openAdcButton.addEventListener("click", () => {
+        popupbox.classList.add("open");
+    });
+}
+
+if (openSupButton != null) {
+    openSupButton.addEventListener("click", () => {
+        popupbox.classList.add("open");
+    });
+}
+
+closeBtn.addEventListener("click", () => {
+    popupbox.classList.remove("open");
+});
 
 
 

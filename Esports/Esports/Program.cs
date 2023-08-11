@@ -14,7 +14,7 @@ namespace Esports
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +31,7 @@ namespace Esports
 
             
             })
+                .AddRoles<IdentityRole<Guid>>()
                 .AddSignInManager<MySignInManager>()
                 .AddEntityFrameworkStores<EsportsDbContext>();
             builder.Services.AddControllersWithViews(); 
@@ -40,6 +41,7 @@ namespace Esports
             builder.Services.AddScoped<IImageConverter, ImageConverter>();
             builder.Services.AddScoped<ILeadearboardsService, LeaderboardsService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IAdministratorService, AdministratorService>();
 
             var app = builder.Build();
 
@@ -67,6 +69,31 @@ namespace Esports
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var rm = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+
+                var roles = new[] { "Admin" };
+                foreach (var role in roles)
+                {
+                    if (!await rm.RoleExistsAsync(role))
+                    {
+                        await rm.CreateAsync(new IdentityRole<Guid>(role));
+                    }
+                }
+            }
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var um = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                var user = await um.FindByEmailAsync("lachezar10@abv.bg");
+
+                if (user != null && um.IsInRoleAsync(user, "Admin").Result == false)
+                {
+                    var idk = await um.AddToRoleAsync(user, "Admin");
+                }
+            }
 
             app.Run();
         }

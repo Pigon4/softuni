@@ -17,6 +17,10 @@
             <li class="list-group-item" id="header-list-group-item"><a id="header-item-font" asp-controller="Home" asp-action="Leaderboards">Leaderboards</a></li>
             <li class="list-group-item" id="header-list-group-item"><a id="header-item-font" asp-controller="Home" asp-action="Packs">Packs</a></li>
             <li class="list-group-item" id="header-list-group-item"><a id="header-item-font" asp-controller="Home" asp-action="Live">Live</a></li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li class="list-group-item" id="header-list-group-item"><a id="header-item-font" asp-controller="Administrator" asp-action="ControlPanel">ControlPanel</a></li>
+            }
             <li style="display:inline; position:absolute; top: 10px; right: 20px;"><partial name="_LoginPartial" /></li>
         </ul>
         
