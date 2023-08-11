@@ -132,7 +132,12 @@ namespace Esports.Services
                     Position = item.Position,
                     Image = item.Image
                 });
-                await _context.UserPlayers.AddAsync(new UserPlayers { UserId = userId, PlayerId = item.Id });
+
+                if (!await _context.UserPlayers.AsNoTracking().AnyAsync(x => x.UserId == userId && x.PlayerId == item.Id))
+                {
+                    await _context.UserPlayers.AddAsync(new UserPlayers { UserId = userId, PlayerId = item.Id });
+                }
+
             }
             UserPacks up = await _context.UserPacks.FirstAsync(x => x.PackId == 1 && x.UserId == userId);
 

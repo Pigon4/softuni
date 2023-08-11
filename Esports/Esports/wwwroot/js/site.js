@@ -4,7 +4,6 @@
 // Write your JavaScript code.
 
 var popupbox = document.getElementById("popupbox");
-var closeBtn = document.getElementById("closeBtn");
 var openBtn = document.getElementById("Add-Player-Button");
 
 var target = document.getElementById("target");
@@ -15,12 +14,9 @@ openBtn.addEventListener("click", () => {
     popupbox.classList.add("open");
 });
 
-closeBtn.addEventListener("click", () => {
-    popupbox.classList.remove("open");
-});
+
 
 function AddPlayer(name) {
-
     $.ajax({
         url: "/UserTeam/AddPlayer",
         type: "GET",
@@ -33,12 +29,13 @@ function AddPlayer(name) {
 
         }
     })
-
-
 }
 
 
 $("#topBtn").unbind("click").bind("click", () => {
+
+    addRemoveBorders("topBtn");
+
     $.ajax({
         url: "/UserTeam/UserPlayers",
         datatype: "json",
@@ -47,7 +44,7 @@ $("#topBtn").unbind("click").bind("click", () => {
         success: function (data) {
             var htmlString = "";
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname +"\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname +"\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"
             }
 
             target.innerHTML = htmlString;
@@ -61,6 +58,9 @@ $("#topBtn").unbind("click").bind("click", () => {
 })
 
 $("#jngBtn").unbind("click").bind("click", () => {
+
+    addRemoveBorders("jngBtn");
+
     $.ajax({
         url: "/UserTeam/UserPlayers",
         datatype: "json",
@@ -70,7 +70,7 @@ $("#jngBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"  }
 
             target.innerHTML = htmlString;
         },
@@ -81,6 +81,9 @@ $("#jngBtn").unbind("click").bind("click", () => {
 })
 
 $("#midBtn").unbind("click").bind("click", () => {
+
+    addRemoveBorders("midBtn");
+
     $.ajax({
         url: "/UserTeam/UserPlayers",
         datatype: "json",
@@ -90,7 +93,7 @@ $("#midBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },
@@ -101,6 +104,9 @@ $("#midBtn").unbind("click").bind("click", () => {
 })
 
 $("#adcBtn").unbind("click").bind("click", () => {
+
+    addRemoveBorders("adcBtn");
+
     $.ajax({
         url: "/UserTeam/UserPlayers",
         datatype: "json",
@@ -110,7 +116,7 @@ $("#adcBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },
@@ -121,6 +127,9 @@ $("#adcBtn").unbind("click").bind("click", () => {
 })
 
 $("#supBtn").unbind("click").bind("click", () => {
+
+    addRemoveBorders("supBtn");
+
     $.ajax({
         url: "/UserTeam/UserPlayers",
         datatype: "json",
@@ -130,7 +139,7 @@ $("#supBtn").unbind("click").bind("click", () => {
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
-                htmlString += "<img id=\"pic\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> "            }
+                htmlString += "<div id=\"popup-image-text-container\"><img id=\"team-image\" src=\"" + data[i].image + "\" onclick=\"AddPlayer(\'" + data[i].nickname + "\')\"></img><div id=\"name\" style:absolute>" + data[i].nickname + "</div> </div>"            }
 
             target.innerHTML = htmlString;
         },
@@ -140,7 +149,32 @@ $("#supBtn").unbind("click").bind("click", () => {
     })
 })
 
+function addRemoveBorders(btnString) {
+    var topBtn = document.getElementById("topBtn");
+    var jngBtn = document.getElementById("jngBtn");
+    var midBtn = document.getElementById("midBtn");
+    var adcBtn = document.getElementById("adcBtn");
+    var supBtn = document.getElementById("supBtn");
 
+    switch (btnString) {
+        case "topBtn": topBtn.classList.add("selectedBorder"); jngBtn.classList.remove("selectedBorder");
+            midBtn.classList.remove("selectedBorder"); adcBtn.classList.remove("selectedBorder"); supBtn.classList.remove("selectedBorder"); break;
+
+        case "jngBtn": topBtn.classList.remove("selectedBorder"); jngBtn.classList.add("selectedBorder");
+            midBtn.classList.remove("selectedBorder"); adcBtn.classList.remove("selectedBorder"); supBtn.classList.remove("selectedBorder"); break;
+
+        case "midBtn": topBtn.classList.remove("selectedBorder"); jngBtn.classList.remove("selectedBorder");
+            midBtn.classList.add("selectedBorder"); adcBtn.classList.remove("selectedBorder"); supBtn.classList.remove("selectedBorder"); break;
+
+        case "adcBtn": topBtn.classList.remove("selectedBorder"); jngBtn.classList.remove("selectedBorder");
+            midBtn.classList.remove("selectedBorder"); adcBtn.classList.add("selectedBorder"); supBtn.classList.remove("selectedBorder"); break;
+
+        case "supBtn": topBtn.classList.remove("selectedBorder"); jngBtn.classList.remove("selectedBorder");
+            midBtn.classList.remove("selectedBorder"); adcBtn.classList.remove("selectedBorder"); supBtn.classList.add("selectedBorder"); break;
+
+    }
+
+}
 
 
 

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 using Esports.DataModels;
+using Esports.Areas.SignInManager;
 using Esports.Services.Contracts;
 using Esports.Services;
 using Esports.Data.Helpers;
@@ -30,6 +31,7 @@ namespace Esports
 
             
             })
+                .AddSignInManager<MySignInManager>()
                 .AddEntityFrameworkStores<EsportsDbContext>();
             builder.Services.AddControllersWithViews(); 
 

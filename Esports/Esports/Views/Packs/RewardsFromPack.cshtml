@@ -1,4 +1,6 @@
 ﻿@model OpenedPackViewModel
+
+@inject IImageConverter _imageConverter
 @{
     ViewBag.Title = "Rewards";
 }
@@ -10,7 +12,7 @@
         <ul>
             @foreach (var item in Model.Players)
             {
-                <li style="display:inline">@item.Nickname </li>
+                <li style="display:inline">@item.Nickname <img src="@_imageConverter.ConvertToImage(item.Image)"></li>
             }
 
         </ul>

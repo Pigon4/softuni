@@ -110,6 +110,7 @@ body {
     left: -13px;
     
 }
+
 #popupbox.open {
     visibility: visible;
 }
@@ -117,14 +118,66 @@ body {
     visibility: hidden;
 }
 
-#pic {
-    height: 50px;
-    width: 50px;
-}
+
 
 #row {
     display: flex;
 }
+
+#close-team-popup-btn {
+    
+}
+
+#roles-btn-container {
+    position: absolute;
+    left: 6%;
+}
+
+.roles-team-btn {
+    color: lightgray;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: black;
+    border-style: solid;
+    border-color: dimgrey;
+    border-width: medium;
+}
+
+.roles-team-btn.selectedBorder {
+    color: white;
+    border-color: lightgray;
+    border-width: medium;
+}
+
+#target {
+    position: relative;
+    top: 50px;
+    display: flex;
+}
+
+#popup-image-text-container {
+    position: relative;
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 125px;
+    flex: 5%;
+}
+
+#team-image {
+    height: 100px;
+    width: 125px;
+}
+
+
+
+#name {
+
+}
+
+
 
 
 
