@@ -21,39 +21,43 @@
                         <div id="team-player-ingamename">@Model.Top.Nickname</div>
                     </div>
             }else{
-                    <button id="Add-Player-Button">+</button>
+                    <button id="Add-Player-Button-Top">+</button>
             }
+
             @if (Model.Jng != null){
                     <div id="image-text-container">
                         <img id="team-image" src="@imageConverter.ConvertToImage(@Model.Jng.Image)">
                         <div id="team-player-ingamename">@Model.Jng.Nickname</div>
                     </div>
             }else{
-                    <button id="Add-Player-Button">+</button>
+                    <button id="Add-Player-Button-Jng">+</button>
             }
+
             @if (Model.Mid != null){
                     <div id="image-text-container">
                         <img id="team-image" src="@imageConverter.ConvertToImage(@Model.Mid.Image)">
                         <div id="team-player-ingamename">@Model.Mid.Nickname</div>
                     </div>
             }else{
-                <button id="Add-Player-Button">+</button>
+                    <button id="Add-Player-Button-Mid">+</button>
             }
+
             @if (Model.Adc != null){
                     <div id="image-text-container">
                         <img id="team-image" src="@imageConverter.ConvertToImage(@Model.Adc.Image)">
                         <div id="team-player-ingamename">@Model.Adc.Nickname</div>
                     </div>
             }else{
-                        <button id="Add-Player-Button">+</button>
+                    <button id="Add-Player-Button-Adc">+</button>
             }
+
             @if (Model.Sup != null){
                     <div id="image-text-container">
                         <img id="team-image" src="@imageConverter.ConvertToImage(@Model.Sup.Image)">
                         <div id="team-player-ingamename">@Model.Sup.Nickname</div>
                     </div>
             }else{
-                    <button id="Add-Player-Button">+</button>
+                    <button id="Add-Player-Button-Sup">+</button>
 
             }
 

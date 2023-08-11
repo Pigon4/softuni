@@ -97,7 +97,51 @@ body {
     visibility: hidden;
 }
 
-#Add-Player-Button {
+#Add-Player-Button-Top {
+    position: initial;
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    color: white;
+}
+
+#Add-Player-Button-Jng {
+    position: initial;
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    color: white;
+}
+
+#Add-Player-Button-Mid {
+    position: initial;
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    color: white;
+}
+
+#Add-Player-Button-Adc {
+    position: initial;
+    background-color: black;
+    border-style: dashed;
+    border-color: dimgray;
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    color: white;
+}
+
+#Add-Player-Button-Sup {
     position: initial;
     background-color: black;
     border-style: dashed;
@@ -241,7 +285,7 @@ body {
     position: absolute;
     margin: 25px;
     width: 80%;
-    height: 70%;
+    height: 60%;
     display: flex;
     flex-direction: column;
 
@@ -262,6 +306,13 @@ body {
 
 #lb-table-items-elements {
     display: inline-block;
+}
+
+#pack-image {
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-color: gray;
 }
 
 

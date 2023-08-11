@@ -12,7 +12,8 @@
 
 <body>
     <div class="container" id="box">
-        <h1>MY PACKS</h1>
+        <h1 style="color: white; margin-top: 10px; margin-left: 10px;">MY PACKS</h1>
+        <hr>
         @if (!hasUserClaimedFreeReward)
         {
             <a asp-controller="Packs" asp-action="GetFreePack">GET FREE PACK</a>
@@ -24,9 +25,18 @@
                 foreach (var item in Model.UserPacks.First().Value)
                 {
                     <ul>
-                        <li>
-                            @item
-                            <a asp-controller="Packs" asp-action="RewardsFromPack" asp-route-packId="@item">&lt-- click to open!</a>
+                        <li style="list-style: none;">
+                            <div>
+                            @if (item == 0)
+                            {
+                                <img src="~/freePack.png" id="pack-image">
+                            }
+                            else
+                            {
+                                    <img src="~/normalPack.png" id="pack-image">
+                            }
+                            <a style="text-decoration: none; color: white; font-size: xx-large" asp-controller="Packs" asp-action="RewardsFromPack" asp-route-packId="@item"> &lt-- click me to open!</a>
+                            </div>
                         </li>
                     </ul>
                 }

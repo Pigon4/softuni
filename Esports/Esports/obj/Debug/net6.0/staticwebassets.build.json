@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RPGh8lfHUVYd62jJQ/a6kvsjkoTEubk142uWXiNnXxc=",
+  "Hash": "cmMTZCNkBi4zeiLXalJjgETH4mghTrcP8GdimTGIyRE=",
   "Source": "Esports",
   "BasePath": "_content/Esports",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\freePack.png",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "freePack.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\freePack.png"
+    },
+    {
       "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\js\\site.js",
       "SourceId": "Esports",
       "SourceType": "Discovered",
@@ -2123,6 +2140,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\loginRegister.png"
+    },
+    {
+      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\normalPack.png",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "normalPack.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\normalPack.png"
     },
     {
       "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\SortedOutBackground.png",

@@ -4,16 +4,30 @@
 // Write your JavaScript code.
 
 var popupbox = document.getElementById("popupbox");
-var openBtn = document.getElementById("Add-Player-Button");
+var openBtn = document.getElementById("Add-Player-Button-Mid");
 var closeBtn = document.getElementById("close-popup-box");
 
 var target = document.getElementById("target");
 
-
-
 openBtn.addEventListener("click", () => {
     popupbox.classList.add("open");
-});
+})
+
+$("Add-Player-Button-Top").bind("click", () => {
+    popupbox.classList.add("open");
+})
+$("Add-Player-Button-Jng").bind("click", () => {
+    popupbox.classList.add("open");
+})
+$("Add-Player-Button-Mid").bind("click", () => {
+    popupbox.classList.add("open");
+})
+$("Add-Player-Button-Adc").bind("click", () => {
+    popupbox.classList.add("open");
+})
+$("Add-Player-Button-Sup").bind("click", () => {
+    popupbox.classList.add("open");
+})
 
 closeBtn.addEventListener("click", () => {
     popupbox.classList.remove("open");

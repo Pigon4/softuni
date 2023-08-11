@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\freePack.png",
+      "PackagePath": "staticwebassets\\freePack.png"
+    },
+    {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -255,6 +259,10 @@
     {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\loginRegister.png",
       "PackagePath": "staticwebassets\\loginRegister.png"
+    },
+    {
+      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\normalPack.png",
+      "PackagePath": "staticwebassets\\normalPack.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Esports.Microsoft.AspNetCore.StaticWebAssets.props",
