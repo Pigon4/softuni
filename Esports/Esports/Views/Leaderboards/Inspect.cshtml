@@ -7,12 +7,71 @@
 }
 <body>
     <div class="container" id="box">
-        <div>@Model.Username</div>
-        <ul>
-            @foreach (var item in Model.Team)
+        <h2 style="color: white">@Model.Username - @Model.Points</h2>
+        <hr>
+        <div id="row">
+            
+            @if (Model.Team.FirstOrDefault(x => x.Position == "top") != null)
             {
-                <li><img style="width:30px; height:30px;" src="@_imageConverter.ConvertToImage(item.Image)">@item.Nickname </li>
+                <div id="image-text-container">
+                    <img id="team-image" src="@_imageConverter.ConvertToImage(Model.Team.First(x => x.Position == "top").Image)">
+                    <div id="team-player-ingamename">@Model.Team.First(x => x.Position == "top").Nickname</div>
+                </div>
             }
-        </ul>
+            else
+            {
+                <button id="Add-Player-Button">?</button>
+            }
+
+            @if (Model.Team.FirstOrDefault(x => x.Position == "jng") != null)
+            {
+                <div id="image-text-container">
+                    <img id="team-image" src="@_imageConverter.ConvertToImage(Model.Team.First(x => x.Position == "jng").Image)">
+                    <div id="team-player-ingamename">@Model.Team.First(x => x.Position == "jng").Nickname</div>
+                </div>
+            }
+            else
+            {
+                <button id="Add-Player-Button">?</button>
+            }
+
+            @if (Model.Team.FirstOrDefault(x => x.Position == "mid") != null)
+            {
+                <div id="image-text-container">
+                    <img id="team-image" src="@_imageConverter.ConvertToImage(Model.Team.First(x => x.Position == "mid").Image)">
+                    <div id="team-player-ingamename">@Model.Team.First(x => x.Position == "mid").Nickname</div>
+                </div>
+            }
+            else
+            {
+                <button id="Add-Player-Button">?</button>
+            }
+
+            @if (Model.Team.FirstOrDefault(x => x.Position == "adc") != null)
+            {
+                <div id="image-text-container">
+                    <img id="team-image" src="@_imageConverter.ConvertToImage(Model.Team.First(x => x.Position == "jng").Image)">
+                    <div id="team-player-ingamename">@Model.Team.First(x => x.Position == "adc").Nickname</div>
+                </div>
+            }
+            else
+            {
+                <button id="Add-Player-Button">?</button>
+            }
+
+            @if (Model.Team.FirstOrDefault(x => x.Position == "sup") != null)
+            {
+                <div id="image-text-container">
+                    <img id="team-image" src="@_imageConverter.ConvertToImage(Model.Team.First(x => x.Position == "sup").Image)">
+                    <div id="team-player-ingamename">@Model.Team.First(x => x.Position == "sup").Nickname</div>
+                </div>
+            }
+            else
+            {
+                <button id="Add-Player-Button">?</button>
+
+            }
+
+        </div>
     </div>
 </body>

@@ -42,11 +42,26 @@ namespace Esports.Controllers
 
         public async Task<IActionResult> GetFreePack()
         {
-            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-                
-            await _packsService.GetFreePackAsync(currUserId);
+            if (ModelState.IsValid)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            return RedirectToAction("Packs", "Home");
+                    await _packsService.GetFreePackAsync(currUserId);
+
+                    return RedirectToAction("Packs", "Home");
+                }
+                else
+                {
+                    return Redirect("/Identity/Account/Login");
+                }
+               
+
+            }
+
+            else { return RedirectToAction("Index", "Home"); }
+
         }
 
     }

@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\drakos.gif",
-      "PackagePath": "staticwebassets\\drakos.gif"
-    },
-    {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -27,6 +23,10 @@
     {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\lecLogo.png",
+      "PackagePath": "staticwebassets\\lecLogo.png"
     },
     {
       "Id": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\lib\\bootstrap\\LICENSE",

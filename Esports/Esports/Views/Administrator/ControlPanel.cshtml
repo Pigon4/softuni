@@ -1,4 +1,7 @@
-﻿
+﻿@model TeamViewModel[]
+
+@inject IImageConverter _imageConverter
+
 @{
     ViewBag.Title = "Control Panel";
 }
@@ -6,8 +9,63 @@
 <body>
     <div class="container" id="box">
         <div>
-            <div>Select daily winners</div>
+            <div style="color: white; font-size: large; margin: 10px;">Select daily winners</div>
+            <hr>
+            <div class="container">
 
+                <div class="dropdown">
+                    <button class="dropbtn1">Game 1</button>
+                    <div class="dropdown-content">
+                        @foreach (var item in Model)
+                        {
+                            <a onclick="setAdmin('@item.Name', 1)"><img style="width: 25px; height: 25px;" src="@_imageConverter.ConvertToImage(item.Logo)">@item.Name</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn2">Game 2</button>
+                    <div class="dropdown-content">
+                        @foreach (var item in Model)
+                        {
+                            <a onclick="setAdmin('@item.Name', 2)"><img style="width: 25px; height: 25px;" src="@_imageConverter.ConvertToImage(item.Logo)">@item.Name</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn3">Game 3</button>
+                    <div class="dropdown-content">
+                        @foreach (var item in Model)
+                        {
+                            <a onclick="setAdmin('@item.Name', 3)"><img style="width: 25px; height: 25px;" src="@_imageConverter.ConvertToImage(item.Logo)">@item.Name</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn4">Game 4</button>
+                    <div class="dropdown-content">
+                        @foreach (var item in Model)
+                        {
+                            <a onclick="setAdmin('@item.Name', 4)"><img style="width: 25px; height: 25px;" src="@_imageConverter.ConvertToImage(item.Logo)">@item.Name</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn5">Game 5</button>
+                    <div class="dropdown-content">
+                        @foreach (var item in Model)
+                        {
+                            <a onclick="setAdmin('@item.Name', 5)"><img style="width: 25px; height: 25px;" src="@_imageConverter.ConvertToImage(item.Logo)">@item.Name</a>
+                        }
+                    </div>
+                </div>
+
+                <button class="saveAdminDaily" onclick="saveDaily()">Save</button>
+                <div id="admWarningText"></div>
+            </div>
         </div>
     </div>
 

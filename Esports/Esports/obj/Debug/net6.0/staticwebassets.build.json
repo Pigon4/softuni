@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cmMTZCNkBi4zeiLXalJjgETH4mghTrcP8GdimTGIyRE=",
+  "Hash": "KVR8X5K2c045xmo/iRvD/TmP4BInZYwg33qOHqOAyKY=",
   "Source": "Esports",
   "BasePath": "_content/Esports",
   "Mode": "Default",
@@ -1088,23 +1088,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\drakos.gif",
-      "SourceId": "Esports",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
-      "BasePath": "_content/Esports",
-      "RelativePath": "drakos.gif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\drakos.gif"
-    },
-    {
       "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\favicon.ico",
       "SourceId": "Esports",
       "SourceType": "Discovered",
@@ -1154,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\lecLogo.png",
+      "SourceId": "Esports",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\",
+      "BasePath": "_content/Esports",
+      "RelativePath": "lecLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lecLogo.png"
     },
     {
       "Identity": "C:\\Users\\la4ez\\Desktop\\git\\softuni\\Esports\\Esports\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -13,6 +13,56 @@ var openSupButton = document.getElementById("Add-Player-Button-Sup");
 
 var target = document.getElementById("target");
 
+var gameOneBtn = document.getElementsByClassName("dropbtn1");
+var gameTwoBtn = document.getElementsByClassName("dropbtn2");
+var gameThreeBtn = document.getElementsByClassName("dropbtn3");
+var gameFourBtn = document.getElementsByClassName("dropbtn4");
+var gameFiveBtn = document.getElementsByClassName("dropbtn5");
+
+
+function setAdmin(name, gameNum) {
+    switch (gameNum) {
+        case 1: gameOneBtn[0].innerHTML = name; break;
+        case 2: gameTwoBtn[0].innerHTML = name; break;
+        case 3: gameThreeBtn[0].innerHTML = name; break;
+        case 4: gameFourBtn[0].innerHTML = name; break;
+        case 5: gameFiveBtn[0].innerHTML = name; break;
+
+        default:
+    }
+}
+
+function saveDaily() {
+
+    var admWarningText = document.getElementById("admWarningText");
+
+    if (gameOneBtn[0].innerHTML != 'Game 1' &&
+        gameTwoBtn[0].innerHTML != 'Game 2' &&
+        gameThreeBtn[0].innerHTML != 'Game 3' &&
+        gameFourBtn[0].innerHTML != 'Game 4' &&
+        gameFiveBtn[0].innerHTML != 'Game 5') {
+
+        var winners = [gameOneBtn[0].innerHTML, gameTwoBtn[0].innerHTML, gameThreeBtn[0].innerHTML, gameFourBtn[0].innerHTML, gameFiveBtn[0].innerHTML];
+
+        $.ajax({
+            url: "/Administrator/GivePoints",
+            type: "Post",
+            data: { 'winners': winners },
+            success: function () {
+                location.reload();
+            },
+            error: function () {
+
+            }
+        })
+
+
+    } else {
+        admWarningText.innerHTML = "Please select all five games before saving!"
+    }
+}
+
+    
 if (openTopButton != null) {
     openTopButton.addEventListener("click", () => {
         popupbox.classList.add("open");
@@ -43,9 +93,12 @@ if (openSupButton != null) {
     });
 }
 
-closeBtn.addEventListener("click", () => {
-    popupbox.classList.remove("open");
-});
+if (closeBtn != null) {
+    closeBtn.addEventListener("click", () => {
+        popupbox.classList.remove("open");
+    });
+}
+
 
 
 
@@ -208,6 +261,8 @@ function addRemoveBorders(btnString) {
     }
 
 }
+
+
 
 
 

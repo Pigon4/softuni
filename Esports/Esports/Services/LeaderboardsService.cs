@@ -38,15 +38,15 @@ namespace Esports.Services
         {
             List<Guid> ids = new List<Guid>();
             ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
-                .Select(x => x.TopId).FirstAsync());
+                .Select(x => x.TopId).FirstOrDefaultAsync());
             ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
-                .Select(x => x.JngId).FirstAsync());
+                .Select(x => x.JngId).FirstOrDefaultAsync());
             ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
-                .Select(x => x.MidId).FirstAsync());
+                .Select(x => x.MidId).FirstOrDefaultAsync());
             ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
-                .Select(x => x.AdcId).FirstAsync());
+                .Select(x => x.AdcId).FirstOrDefaultAsync());
             ids.Add(await _context.UserTeams.Where(x => x.UserId == userId)
-                .Select(x => x.SupId).FirstAsync());
+                .Select(x => x.SupId).FirstOrDefaultAsync());
             List<PlayerViewModel> players = await _teamService.GetUserTeamPlayersAsync(ids);
 
             InspectUserViewModel ins = await _context.Users

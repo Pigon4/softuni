@@ -1,7 +1,9 @@
-﻿namespace Esports.Services.Contracts
+﻿using Microsoft.Extensions.ObjectPool;
+
+namespace Esports.Services.Contracts
 {
     public interface IAdministratorService
     {
-        public Task doSmth();
+        public Task GivePoints(string[] winners);
     }
 }

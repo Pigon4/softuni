@@ -19,8 +19,14 @@ namespace Esports.Controllers
 
         public async Task<IActionResult> Inspect(Guid userId)
         {
-            InspectUserViewModel model = await _leadearboardsService.GetUserToInspectAsync(userId);
-            return View(model);
+            if (ModelState.IsValid)
+            {
+                InspectUserViewModel model = await _leadearboardsService.GetUserToInspectAsync(userId);
+                return View(model);
+            }
+
+            return RedirectToAction("Index", "Home");
+
         }
     }
 }

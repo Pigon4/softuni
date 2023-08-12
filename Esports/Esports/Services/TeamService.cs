@@ -150,5 +150,19 @@ namespace Esports.Services
 
            return team;
         }
+
+        public async Task<TeamViewModel[]> GetAllTeamsAsync()
+        {
+            TeamViewModel[] teams = await _context.Teams
+                .Select(x => new TeamViewModel 
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Logo = x.Logo
+
+            }).ToArrayAsync();
+
+            return teams;
+        }
     }
 }

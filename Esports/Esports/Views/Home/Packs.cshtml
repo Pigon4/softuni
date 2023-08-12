@@ -20,7 +20,7 @@
         }
         else
         {
-            if (Model.UserPacks.Any())
+            if (Model.UserPacks.Any(x => x.Key == Guid.Parse(_userManager.GetUserId(User))))
             {
                 foreach (var item in Model.UserPacks.First().Value)
                 {
@@ -43,7 +43,7 @@
             }
             else
             {
-                <div>Sorry u borke! </div>
+                <div>You have no packs.</div>
             }
 
 

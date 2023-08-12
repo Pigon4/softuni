@@ -8,5 +8,6 @@
         public Task AddPlayerToTeamAsync(string name, Guid userId);
         public Task<List<PlayerViewModel>> GetUserTeamPlayersAsync(List<Guid> ids);
         public Task<MyTeamViewModel> GetUserTeamAsync(Guid userId);
+        public Task<TeamViewModel[]> GetAllTeamsAsync();
     }
 }

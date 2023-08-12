@@ -24,35 +24,74 @@ namespace Esports.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            return Error();
+            
         }
 
         public async Task<IActionResult> MyTeam()
         {
-            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            MyTeamViewModel model = await _teamService.GetUserTeamAsync(currUserId);
+            if (ModelState.IsValid)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                    MyTeamViewModel model = await _teamService.GetUserTeamAsync(currUserId);
 
-            return View(model);
+                    return View(model);
+                }
+                return Redirect("/Identity/Account/Login");
+
+            }
+            else { 
+                return Error(); 
+            }
+
         }
 
         public async Task<IActionResult> Leaderboards()
         {
-            List<UserViewModel> topTen = await _leaderboardsService.GetTopTenAsync();
+            if (ModelState.IsValid)
+            {
+                List<UserViewModel> topTen = await _leaderboardsService.GetTopTenAsync();
 
-            return View(topTen);
+                return View(topTen);
+            }
+            else
+            {
+                return Error();
+            }
+
         }
         public async Task<IActionResult> Packs()
         {
-            Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            Dictionary<Guid, List<int>> dict = new Dictionary<Guid, List<int>>();
+            if (ModelState.IsValid)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    Guid currUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                    Dictionary<Guid, List<int>> dict = new Dictionary<Guid, List<int>>();
 
-            dict.Add(currUserId, await _packService.GetAllPacksByUserIdAsync(currUserId));
+                    dict.Add(currUserId, await _packService.GetAllPacksByUserIdAsync(currUserId));
 
-            UserPacksViewModel model = new UserPacksViewModel {
-                UserPacks = dict
-            };
+                    UserPacksViewModel model = new UserPacksViewModel
+                    {
+                        UserPacks = dict
+                    };
 
-            return View(model);
+                    return View(model);
+                }
+                return Redirect("/Identity/Account/Login");
+
+            }
+            else
+            {
+                return Error();
+            }
+            
         }
         public IActionResult Live()
         {

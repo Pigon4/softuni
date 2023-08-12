@@ -769,6 +769,338 @@ namespace Esports.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserPlayers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            PlayerId = new Guid("f8fee8fc-f0ec-400a-9ada-29e031ca6549"),
+                            UserId = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8")
+                        },
+                        new
+                        {
+                            Id = 2,
+                            PlayerId = new Guid("021cff98-4879-4428-908c-7c3e8daa9fd6"),
+                            UserId = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8")
+                        },
+                        new
+                        {
+                            Id = 3,
+                            PlayerId = new Guid("c622fec6-cd1c-4ec1-9d50-b60b3c937fe9"),
+                            UserId = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8")
+                        },
+                        new
+                        {
+                            Id = 4,
+                            PlayerId = new Guid("ac03f7ff-fdbf-4d1d-bf84-19e8b8bcc0e5"),
+                            UserId = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8")
+                        },
+                        new
+                        {
+                            Id = 5,
+                            PlayerId = new Guid("7c83f5ca-6a9f-4b93-83ed-b84331f30102"),
+                            UserId = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8")
+                        },
+                        new
+                        {
+                            Id = 6,
+                            PlayerId = new Guid("4646df15-9de7-4066-9d1c-d99e56b905d3"),
+                            UserId = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182")
+                        },
+                        new
+                        {
+                            Id = 7,
+                            PlayerId = new Guid("e7ff323f-a577-4696-96c2-896413a091b9"),
+                            UserId = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182")
+                        },
+                        new
+                        {
+                            Id = 8,
+                            PlayerId = new Guid("90668808-38ed-43fe-9ecd-95b6478f9da0"),
+                            UserId = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182")
+                        },
+                        new
+                        {
+                            Id = 9,
+                            PlayerId = new Guid("021cff98-4879-4428-908c-7c3e8daa9fd6"),
+                            UserId = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182")
+                        },
+                        new
+                        {
+                            Id = 10,
+                            PlayerId = new Guid("069a923e-5785-4907-822d-2a3528dbd67c"),
+                            UserId = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182")
+                        },
+                        new
+                        {
+                            Id = 11,
+                            PlayerId = new Guid("f5dc4b66-5693-4959-8102-b6967de6ea3f"),
+                            UserId = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4")
+                        },
+                        new
+                        {
+                            Id = 12,
+                            PlayerId = new Guid("c49d757c-ac10-4cab-97f4-016c457803be"),
+                            UserId = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4")
+                        },
+                        new
+                        {
+                            Id = 13,
+                            PlayerId = new Guid("1033645c-84db-49d8-92c0-8ea6d6ee2543"),
+                            UserId = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4")
+                        },
+                        new
+                        {
+                            Id = 14,
+                            PlayerId = new Guid("adb1aecb-33dd-4679-9dc0-4f7faf93e823"),
+                            UserId = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4")
+                        },
+                        new
+                        {
+                            Id = 15,
+                            PlayerId = new Guid("9e74a0d9-30c4-4943-8c06-f25a7c650eff"),
+                            UserId = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4")
+                        },
+                        new
+                        {
+                            Id = 16,
+                            PlayerId = new Guid("71c3fac3-2923-499d-a305-d6ada7bdcaff"),
+                            UserId = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5")
+                        },
+                        new
+                        {
+                            Id = 17,
+                            PlayerId = new Guid("d3163c5f-6442-4065-8ae4-cabc90ffb4fd"),
+                            UserId = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5")
+                        },
+                        new
+                        {
+                            Id = 18,
+                            PlayerId = new Guid("7c20a846-e54a-4278-8df1-4fb87200143e"),
+                            UserId = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5")
+                        },
+                        new
+                        {
+                            Id = 19,
+                            PlayerId = new Guid("b3ee80d1-d284-4df3-820f-c907454fdb46"),
+                            UserId = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5")
+                        },
+                        new
+                        {
+                            Id = 20,
+                            PlayerId = new Guid("0d82ea42-2ca8-44f3-8667-12f6dbaadd9b"),
+                            UserId = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5")
+                        },
+                        new
+                        {
+                            Id = 21,
+                            PlayerId = new Guid("041fb4d2-c514-4e0a-b528-c14a064b44f9"),
+                            UserId = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a")
+                        },
+                        new
+                        {
+                            Id = 22,
+                            PlayerId = new Guid("97d56415-1dc2-4222-80e8-96d9a4b312ca"),
+                            UserId = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a")
+                        },
+                        new
+                        {
+                            Id = 23,
+                            PlayerId = new Guid("c622fec6-cd1c-4ec1-9d50-b60b3c937fe9"),
+                            UserId = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a")
+                        },
+                        new
+                        {
+                            Id = 24,
+                            PlayerId = new Guid("5c3d2b6a-f302-49eb-8cab-523f6debad41"),
+                            UserId = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a")
+                        },
+                        new
+                        {
+                            Id = 25,
+                            PlayerId = new Guid("78d522f9-1b3a-4b7b-b552-422edb8871fe"),
+                            UserId = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a")
+                        },
+                        new
+                        {
+                            Id = 26,
+                            PlayerId = new Guid("4646df15-9de7-4066-9d1c-d99e56b905d3"),
+                            UserId = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24")
+                        },
+                        new
+                        {
+                            Id = 27,
+                            PlayerId = new Guid("ac03f7ff-fdbf-4d1d-bf84-19e8b8bcc0e5"),
+                            UserId = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24")
+                        },
+                        new
+                        {
+                            Id = 28,
+                            PlayerId = new Guid("90668808-38ed-43fe-9ecd-95b6478f9da0"),
+                            UserId = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24")
+                        },
+                        new
+                        {
+                            Id = 29,
+                            PlayerId = new Guid("53029bf1-ef61-42eb-86d6-abbb100a8e7e"),
+                            UserId = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24")
+                        },
+                        new
+                        {
+                            Id = 30,
+                            PlayerId = new Guid("069a923e-5785-4907-822d-2a3528dbd67c"),
+                            UserId = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24")
+                        },
+                        new
+                        {
+                            Id = 31,
+                            PlayerId = new Guid("041fb4d2-c514-4e0a-b528-c14a064b44f9"),
+                            UserId = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb")
+                        },
+                        new
+                        {
+                            Id = 32,
+                            PlayerId = new Guid("c49d757c-ac10-4cab-97f4-016c457803be"),
+                            UserId = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb")
+                        },
+                        new
+                        {
+                            Id = 33,
+                            PlayerId = new Guid("9566baeb-b923-458f-87af-686b5c024149"),
+                            UserId = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb")
+                        },
+                        new
+                        {
+                            Id = 34,
+                            PlayerId = new Guid("e7ff323f-a577-4696-96c2-896413a091b9"),
+                            UserId = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb")
+                        },
+                        new
+                        {
+                            Id = 35,
+                            PlayerId = new Guid("b0a8dd09-3fed-4379-971a-90a5f1cfa323"),
+                            UserId = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb")
+                        },
+                        new
+                        {
+                            Id = 36,
+                            PlayerId = new Guid("585a5cd0-01aa-4cfd-8cc3-b731fd3303b0"),
+                            UserId = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130")
+                        },
+                        new
+                        {
+                            Id = 37,
+                            PlayerId = new Guid("e97b883f-3b41-4f22-a6b1-33c11142997c"),
+                            UserId = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130")
+                        },
+                        new
+                        {
+                            Id = 38,
+                            PlayerId = new Guid("970b89cb-f9d6-456e-9433-d0686118e7bb"),
+                            UserId = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130")
+                        },
+                        new
+                        {
+                            Id = 39,
+                            PlayerId = new Guid("020bf2b5-22ef-428f-9458-90d521c60df7"),
+                            UserId = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130")
+                        },
+                        new
+                        {
+                            Id = 40,
+                            PlayerId = new Guid("7c83f5ca-6a9f-4b93-83ed-b84331f30102"),
+                            UserId = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130")
+                        },
+                        new
+                        {
+                            Id = 41,
+                            PlayerId = new Guid("1fd70037-7642-4c28-a20a-68a44efb02af"),
+                            UserId = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5")
+                        },
+                        new
+                        {
+                            Id = 42,
+                            PlayerId = new Guid("9b0b95bf-a0b1-4eec-b439-1c86b4dca1e7"),
+                            UserId = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5")
+                        },
+                        new
+                        {
+                            Id = 43,
+                            PlayerId = new Guid("90668808-38ed-43fe-9ecd-95b6478f9da0"),
+                            UserId = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5")
+                        },
+                        new
+                        {
+                            Id = 44,
+                            PlayerId = new Guid("ac03f7ff-fdbf-4d1d-bf84-19e8b8bcc0e5"),
+                            UserId = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5")
+                        },
+                        new
+                        {
+                            Id = 45,
+                            PlayerId = new Guid("78d522f9-1b3a-4b7b-b552-422edb8871fe"),
+                            UserId = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5")
+                        },
+                        new
+                        {
+                            Id = 46,
+                            PlayerId = new Guid("1e3d0b8e-346a-4852-abf2-d45f68a946f7"),
+                            UserId = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f")
+                        },
+                        new
+                        {
+                            Id = 47,
+                            PlayerId = new Guid("711d3c0a-a5ee-4e26-b9d7-2e77acf3c796"),
+                            UserId = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f")
+                        },
+                        new
+                        {
+                            Id = 48,
+                            PlayerId = new Guid("9566baeb-b923-458f-87af-686b5c024149"),
+                            UserId = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f")
+                        },
+                        new
+                        {
+                            Id = 49,
+                            PlayerId = new Guid("5fdd66b3-5b97-47c0-9b16-0bc3c0cf3886"),
+                            UserId = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f")
+                        },
+                        new
+                        {
+                            Id = 50,
+                            PlayerId = new Guid("d512a82c-4792-486a-8c18-eacf7acec30a"),
+                            UserId = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f")
+                        },
+                        new
+                        {
+                            Id = 51,
+                            PlayerId = new Guid("f19b3751-9016-4c69-86e6-683eef3baa37"),
+                            UserId = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a")
+                        },
+                        new
+                        {
+                            Id = 52,
+                            PlayerId = new Guid("5c3d2b6a-f302-49eb-8cab-523f6debad41"),
+                            UserId = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a")
+                        },
+                        new
+                        {
+                            Id = 53,
+                            PlayerId = new Guid("8e802d10-fa86-4132-9a89-d6b26e4e7341"),
+                            UserId = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a")
+                        },
+                        new
+                        {
+                            Id = 54,
+                            PlayerId = new Guid("fe0dfd94-c516-48f7-8b7c-b1a368c27c4f"),
+                            UserId = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a")
+                        },
+                        new
+                        {
+                            Id = 55,
+                            PlayerId = new Guid("585a5cd0-01aa-4cfd-8cc3-b731fd3303b0"),
+                            UserId = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a")
+                        });
                 });
 
             modelBuilder.Entity("Esports.Data.Models.UserTeams", b =>
@@ -866,6 +1198,206 @@ namespace Esports.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f54a976d-7fd7-4b63-85d5-e4e21acf66e8"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d802c49c-4457-4b0f-84c6-c22d171c5bff",
+                            Email = "lachezar10@abv.bg",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "LACHEZAR10@ABV.BG",
+                            NormalizedUserName = "PIGON",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJUTIxlG1GdkF5gH0tdPdGF6qfOoiCc+fJwcacCBr0YtjGb3u4HOaVsTUL/WrU/EjQ==",
+                            PhoneNumberConfirmed = false,
+                            Points = 44,
+                            SecurityStamp = "05404d84-145d-4a65-8e9d-88f55f40ab6b",
+                            TwoFactorEnabled = false,
+                            UserName = "Pigon"
+                        },
+                        new
+                        {
+                            Id = new Guid("28ff8e0a-d24b-417a-82a3-cd1f0c9df182"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "06180940-0a02-4df7-9a59-5787ab075c19",
+                            Email = "Ash.aimed.15@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ASH.AIMED.15@GMAIL.COM",
+                            NormalizedUserName = "ASH_AIMED",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPJeYxfSiiyYwUjrWQ11L0L6cQkeLQSuZg/918bwhJzgDOwTgLeJrSUgc9TGaDi+1A==",
+                            PhoneNumberConfirmed = false,
+                            Points = 16,
+                            SecurityStamp = "3e4e19d0-3df5-4572-9a6c-c64a3949037c",
+                            TwoFactorEnabled = false,
+                            UserName = "Ash_aimed"
+                        },
+                        new
+                        {
+                            Id = new Guid("ccdd2512-6b29-4b7a-9175-0a3be6be13b4"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "50ba8612-da89-44ca-b43b-14073a184194",
+                            Email = "RichJer@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "RICHJER@GMAIL.COM",
+                            NormalizedUserName = "RICH JERMAINE",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPiqdnwpzVxrwuLP1ZJ1FlkJhINyap+0GIUH3ewawk7QyFVHSNPkCClxkw+8fVx0iQ==",
+                            PhoneNumberConfirmed = false,
+                            Points = 25,
+                            SecurityStamp = "831785a6-13f1-4ba0-853f-834caddd6f98",
+                            TwoFactorEnabled = false,
+                            UserName = "rich jermaine"
+                        },
+                        new
+                        {
+                            Id = new Guid("07b3d80f-c301-45ae-8e59-27926862c2f5"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "4c31aa7d-321f-427d-9294-7d88b0d1e7d4",
+                            Email = "fncnumberone@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "FNCNUMBERONE@GMAIL.COM",
+                            NormalizedUserName = "FNCFAN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHVsG3KRap2ca/kVdJ6WIiCr0RYmyWaU+kkOpZoe2CgFvxQW7yR+hAeyRWnjmyxsSQ==",
+                            PhoneNumberConfirmed = false,
+                            Points = 7,
+                            SecurityStamp = "46736651-f2fd-4932-aef6-c44f00cfedf0",
+                            TwoFactorEnabled = false,
+                            UserName = "FncFan"
+                        },
+                        new
+                        {
+                            Id = new Guid("2405e5fe-aad2-452d-8655-5245baee9f2a"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d3735089-9cfa-4e2d-bc73-f4b1a824c5f9",
+                            Email = "depression@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "DEPRESSION@GMAIL.COM",
+                            NormalizedUserName = "SADDD",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAQFENsbzpEFM81kTCc1/tF7+Bi6HssDg32s2F9d9mE8QByDTcl91CIdAJnKjzhL9A==",
+                            PhoneNumberConfirmed = false,
+                            Points = 13,
+                            SecurityStamp = "549d989f-d31d-477f-bab9-9eb9163feae2",
+                            TwoFactorEnabled = false,
+                            UserName = "saddd"
+                        },
+                        new
+                        {
+                            Id = new Guid("b6d3f7cb-eef3-43e6-ba6a-ab2cae8aad24"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "1184c191-eb1f-4d3b-88ff-cc6a44138d0b",
+                            Email = "shouldvestartearlier@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "SHOULDVESTARTEARLIER@GMAIL.COM",
+                            NormalizedUserName = "LAZY ASPERGER",
+                            PasswordHash = "AQAAAAEAACcQAAAAECBRE+QCiQrcX139hmYiZISNeyiZ2Pk0WzpQAzFWcQj9fCFrrPve1myCbTaXrOzL/A==",
+                            PhoneNumberConfirmed = false,
+                            Points = 31,
+                            SecurityStamp = "a21827d1-332d-486a-a395-11c5bfca316c",
+                            TwoFactorEnabled = false,
+                            UserName = "Lazy asperger"
+                        },
+                        new
+                        {
+                            Id = new Guid("fda99316-de5d-45a1-a2fc-fabc5e74efbb"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "e435627c-fde9-4f63-9ecd-a1e0f1de7f67",
+                            Email = "Brezhovica@yahoo.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "BREZHOVICA@YAHOO.COM",
+                            NormalizedUserName = "BREZHO",
+                            PasswordHash = "AQAAAAEAACcQAAAAEG10+ja+SW7jpOlZ2oMiM/iYmicztgPswHo+rq/7E0ByeuX4r03exJuWo8f5OoC19Q==",
+                            PhoneNumberConfirmed = false,
+                            Points = 34,
+                            SecurityStamp = "c2823644-260d-4737-81b3-97c5f2000430",
+                            TwoFactorEnabled = false,
+                            UserName = "Brezho"
+                        },
+                        new
+                        {
+                            Id = new Guid("d6bad4f5-34a8-4313-b86f-b36b8898d130"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "9abf6e17-e4e9-4223-be63-ffb2d516d740",
+                            Email = "Drago_Ussopp@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "DRAGO_USSOPP@GMAIL.COM",
+                            NormalizedUserName = "DU44",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFc6ziFxKP8LIr9yI6u9G0pyeXi2mQi/EVRJeRa9jxxTqkYkCI2y77yJ+rfR1ljChw==",
+                            PhoneNumberConfirmed = false,
+                            Points = 18,
+                            SecurityStamp = "dc90a6fd-718e-4f51-963a-5a3446dcd3a0",
+                            TwoFactorEnabled = false,
+                            UserName = "du44"
+                        },
+                        new
+                        {
+                            Id = new Guid("926ff209-2068-40ac-a957-a94523b2ffb5"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d05c561d-c150-44d6-b33b-26dcc0f0a984",
+                            Email = "pieceisreal@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "PIECEISREAL@GMAIL.COM",
+                            NormalizedUserName = "THE ONE",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH7EcWZrhrxM4M7i1QN7rCLudZFPsz0ptswIPnJKVWwB+vCZclVUw96roJ+AkOFFNA==",
+                            PhoneNumberConfirmed = false,
+                            Points = 1,
+                            SecurityStamp = "979dadbc-8cbd-4562-b3b7-0a5e7ef58272",
+                            TwoFactorEnabled = false,
+                            UserName = "the one"
+                        },
+                        new
+                        {
+                            Id = new Guid("0971c874-4d75-413a-84bf-9bb817b5227f"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b127257c-bd20-4c73-8c3b-3196fac3d803",
+                            Email = "creative@abv.bg",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "CREATIVE@ABV.BG",
+                            NormalizedUserName = "EXTRAVAGANTLY",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDTy6fJFonP9eoCevglFDNgyB/MrMt4UO5DW52I4D7Z8QkgVTWims4iWmHibFUlPUw==",
+                            PhoneNumberConfirmed = false,
+                            Points = 39,
+                            SecurityStamp = "339aa7d7-ede9-4f39-ae83-a2cfab21a688",
+                            TwoFactorEnabled = false,
+                            UserName = "extravagantly"
+                        },
+                        new
+                        {
+                            Id = new Guid("aac7256f-ad4a-4634-a5a8-18f85572331a"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3155b6f4-a641-4264-9dbe-9f1795f52840",
+                            Email = "Jesper_Beovarie@gmail.com",
+                            EmailConfirmed = false,
+                            HasClaimedFreeReward = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "JESPER_BEOVARIE@GMAIL.COM",
+                            NormalizedUserName = "JESPER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEK1ie7L5StCWwqOr2ZOwGIcDvt2nEwdq9t9hz8ASETNQEsURMvX8hZ8JMIyhI8EmLA==",
+                            PhoneNumberConfirmed = false,
+                            Points = 28,
+                            SecurityStamp = "cf2f6e79-5bfe-44b7-9860-6913230e30c1",
+                            TwoFactorEnabled = false,
+                            UserName = "Jesper"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
@@ -1049,7 +1581,7 @@ namespace Esports.Data.Migrations
                     b.HasOne("Esports.DataModels.ApplicationUser", "User")
                         .WithMany("UserTeam")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
